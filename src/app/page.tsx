@@ -105,15 +105,17 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-black/25" />
 
         <header className="absolute left-1/2 top-0 z-10 grid w-full max-w-[1254px] -translate-x-1/2 grid-cols-3 items-center px-5 py-8 text-white md:px-0">
-          <a href="#collection" className="justify-self-start text-[22px] leading-none" aria-label="컬렉션으로 이동">
+          <a href="/collections" className="justify-self-start text-[22px] leading-none" aria-label="컬렉션 상세 페이지로 이동">
             ≡
           </a>
           <p className="justify-self-center text-[28px] font-semibold tracking-[0.42em] text-black/80 md:text-[34px]">
             moriah
           </p>
           <nav className="hidden items-center gap-4 justify-self-end text-[12px] font-semibold md:flex">
-            <a href="#collection">Collection</a>
-            <a href="#business">Business</a>
+            <a href="/news">News</a>
+            <a href="/collections">Collection</a>
+            <a href="/collaboration">Collaboration</a>
+            <a href="/business">Business</a>
             <a href="#contact">Contact</a>
           </nav>
         </header>
@@ -127,7 +129,7 @@ export default function Home() {
             십자가 목걸이, 기도 팔찌, 기독교 선물을 조용하고 현대적인 방식으로 제안하는 moriah의 첫 컬렉션입니다.
           </p>
           <a
-            href="#collection"
+            href="/collections"
             className="mt-7 inline-flex h-9 items-center border border-white/45 px-6 text-[11px] font-bold"
           >
             자세히 보기
@@ -144,7 +146,7 @@ export default function Home() {
           moriah는 절제된 형태와 선명한 소재감으로 십자가와 신앙의 상징을 일상에서 착용하기 좋은
           악세사리로 다시 해석합니다.
         </p>
-        <a href="#products" className="mt-4 inline-flex items-center justify-center text-[12px] font-bold">
+        <a href="/collections" className="mt-4 inline-flex items-center justify-center text-[12px] font-bold">
           ▶ 컬렉션 자세히 보기
         </a>
 
@@ -317,10 +319,20 @@ export default function Home() {
         </div>
 
         <nav className="mt-12 border-y border-black" aria-label="Moriah sections">
-          {["Collection", "Gift Guide", "Business Info", "Contact"].map((item) => (
+          {["News", "Collection", "Collaboration", "Business Info", "Contact"].map((item) => (
             <a
               key={item}
-              href={item === "Business Info" ? "#business" : "#contact"}
+              href={
+                item === "News"
+                  ? "/news"
+                  : item === "Collection"
+                  ? "/collections"
+                    : item === "Collaboration"
+                      ? "/collaboration"
+                    : item === "Business Info"
+                      ? "/business"
+                      : "#contact"
+              }
               className="group flex h-[72px] items-center justify-between border-b border-black text-[26px] font-semibold last:border-b-0"
             >
               <span>{item}</span>
@@ -350,13 +362,27 @@ export default function Home() {
             </p>
           </div>
           {[
-            ["Brand", "Collection", "Gift Guide", "Story"],
+            ["Brand", "News", "Collection", "Collaboration"],
             ["Products", "십자가 목걸이", "기도 팔찌", "기독교 선물"],
             ["Business", site.legalName, site.businessRegistration, site.businessItem],
           ].map((group) => (
             <div key={group[0]} className="space-y-5 pt-2 text-[11px] font-semibold text-white/80">
               {group.map((link) => (
-                <a key={link} href="#contact" className="block hover:text-white">
+                <a
+                  key={link}
+                  href={
+                    link === "News"
+                      ? "/news"
+                      : link === "Collection"
+                        ? "/collections"
+                      : link === "Collaboration"
+                          ? "/collaboration"
+                          : link === "Business"
+                            ? "/business"
+                          : "#contact"
+                  }
+                  className="block hover:text-white"
+                >
                   {link}
                 </a>
               ))}

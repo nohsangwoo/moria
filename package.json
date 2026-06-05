@@ -5,6 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "generate:brand-assets": "node scripts/generate-moriah-brand-assets.mjs",
+    "generate:collection-assets": "node scripts/generate-moriah-collection-assets.mjs",
+    "generate:collaboration-assets": "node scripts/generate-moriah-collaboration-assets.mjs",
+    "generate:news-assets": "node scripts/generate-moriah-news-assets.mjs",
+    "generate:business-assets": "node scripts/generate-moriah-business-assets.mjs",
     "generate:seo-assets": "node scripts/generate-moriah-brand-assets.mjs",
     "build": "next build",
     "start": "next start",

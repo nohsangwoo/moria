@@ -4,6 +4,10 @@ export function GET() {
   const body = `# ${site.name} · ${site.legalName}
 
 URL: ${site.url}
+News page: ${site.url}/news
+Collection page: ${site.url}/collections
+Collaboration page: ${site.url}/collaboration
+Business info page: ${site.url}/business
 Brand operator: ${site.legalName}
 Business registration: ${site.businessRegistration}
 
@@ -29,6 +33,7 @@ ${stories.map((story) => `- ${story.meta}: ${story.text}`).join("\n")}
 - Business item: ${site.businessItem}
 - Business registration: ${site.businessRegistration}
 - Email: ${site.email}
+- Public business info URL: ${site.url}/business
 `;
 
   return new Response(body, {

@@ -12,6 +12,30 @@ function escapeXml(value: string) {
 export function GET() {
   const updated = new Date().toUTCString();
   const feedItems = [
+    {
+      title: `${site.name} The Quiet Cross Series`,
+      link: `${site.url}/collections`,
+      guid: `${site.url}/collections`,
+      description: "moriah 첫 컬렉션의 제작 노트와 착용 장면을 담은 컬렉션 상세 페이지입니다.",
+    },
+    {
+      title: `${site.name} Season Letter 2026`,
+      link: `${site.url}/news`,
+      guid: `${site.url}/news`,
+      description: "moriah 새 제품, 시즌 쇼룸, 파트너 안내를 담은 News 페이지입니다.",
+    },
+    {
+      title: `${site.name} Collaboration`,
+      link: `${site.url}/collaboration`,
+      guid: `${site.url}/collaboration`,
+      description: "교회 선물, 브랜드 협업, 편집숍 팝업을 위한 moriah 협업 안내 페이지입니다.",
+    },
+    {
+      title: `${site.legalName} Business Info`,
+      link: `${site.url}/business`,
+      guid: `${site.url}/business`,
+      description: `아기돌풍 김종란 대표, 사업자등록번호 ${site.businessRegistration}, ${site.businessType}, ${site.businessItem} 공개 사업자 정보 페이지입니다.`,
+    },
     ...services.map((service) => ({
       title: `${site.name} ${service.title}`,
       link: `${site.url}/#services`,
@@ -26,7 +50,7 @@ export function GET() {
     })),
     ...stories.map((story) => ({
       title: `${site.name} ${story.text}`,
-      link: `${site.url}/#collection`,
+      link: `${site.url}/collections`,
       guid: `${site.url}/#story-${encodeURIComponent(story.meta)}`,
       description: story.alt,
     })),
