@@ -8,6 +8,7 @@ News page: ${site.url}/news
 Collection page: ${site.url}/collections
 Collaboration page: ${site.url}/collaboration
 Business info page: ${site.url}/business
+Contact page: ${site.url}/contact
 Brand operator: ${site.legalName}
 Business registration: ${site.businessRegistration}
 
@@ -34,6 +35,7 @@ ${stories.map((story) => `- ${story.meta}: ${story.text}`).join("\n")}
 - Business registration: ${site.businessRegistration}
 - Email: ${site.email}
 - Public business info URL: ${site.url}/business
+- Public contact URL: ${site.url}/contact
 `;
 
   return new Response(body, {

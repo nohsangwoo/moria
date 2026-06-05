@@ -97,7 +97,7 @@ export default function CollectionsPage() {
           <Link href="/collaboration">Collaboration</Link>
           <Link href="/business">Business</Link>
           <Link href="/#products">Products</Link>
-          <Link href="/#contact">Contact</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
       </header>
 

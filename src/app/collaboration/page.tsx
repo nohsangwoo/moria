@@ -112,7 +112,7 @@ export default function CollaborationPage() {
           <Link href="/collections">Collection</Link>
           <Link href="/collaboration">Collaboration</Link>
           <Link href="/business">Business</Link>
-          <Link href="/#contact">Contact</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
       </header>
 
@@ -381,7 +381,9 @@ export default function CollaborationPage() {
                             ? "/collaboration"
                             : link === "Business"
                               ? "/business"
-                            : "/#contact"
+                            : link === "Contact"
+                              ? "/contact"
+                              : "/contact"
                   }
                   className="block hover:text-white"
                 >

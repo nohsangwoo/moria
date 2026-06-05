@@ -199,6 +199,7 @@ export default function BusinessPage() {
           <Link href="/collections">Collection</Link>
           <Link href="/collaboration">Collaboration</Link>
           <Link href="/business">Business</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
       </header>
 
@@ -461,7 +462,9 @@ export default function BusinessPage() {
                             ? "/collaboration"
                             : link === "Business"
                               ? "/business"
-                              : "/#contact"
+                              : link === "Contact"
+                                ? "/contact"
+                                : "/contact"
                   }
                   className="block hover:text-white"
                 >

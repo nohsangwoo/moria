@@ -36,6 +36,12 @@ export function GET() {
       guid: `${site.url}/business`,
       description: `아기돌풍 김종란 대표, 사업자등록번호 ${site.businessRegistration}, ${site.businessType}, ${site.businessItem} 공개 사업자 정보 페이지입니다.`,
     },
+    {
+      title: `${site.name} Contact`,
+      link: `${site.url}/contact`,
+      guid: `${site.url}/contact`,
+      description: "moriah 제품 문의, 기독교 선물 패키지, 교회/소모임 협업, 사업자 정보 확인을 위한 공식 문의 페이지입니다.",
+    },
     ...services.map((service) => ({
       title: `${site.name} ${service.title}`,
       link: `${site.url}/#services`,

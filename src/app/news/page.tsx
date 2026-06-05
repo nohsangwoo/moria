@@ -294,7 +294,7 @@ export default function NewsPage() {
             <Link href="/#products" className="block">
               Products
             </Link>
-            <Link href="/#contact" className="block">
+            <Link href="/contact" className="block">
               Contact
             </Link>
           </div>

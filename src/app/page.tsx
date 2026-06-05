@@ -116,7 +116,7 @@ export default function Home() {
             <a href="/collections">Collection</a>
             <a href="/collaboration">Collaboration</a>
             <a href="/business">Business</a>
-            <a href="#contact">Contact</a>
+            <a href="/contact">Contact</a>
           </nav>
         </header>
 
@@ -217,7 +217,7 @@ export default function Home() {
               </div>
               <h3 className="mt-7 text-[12px] font-extrabold">{product.title}</h3>
               <p className="mt-3 text-[11px] text-[#333]">{product.detail}</p>
-              <a href="#contact" className="mt-7 inline-block text-[11px] font-bold underline underline-offset-4">
+              <a href="/contact" className="mt-7 inline-block text-[11px] font-bold underline underline-offset-4">
                 문의하기
               </a>
             </article>
@@ -331,7 +331,7 @@ export default function Home() {
                       ? "/collaboration"
                     : item === "Business Info"
                       ? "/business"
-                      : "#contact"
+                      : "/contact"
               }
               className="group flex h-[72px] items-center justify-between border-b border-black text-[26px] font-semibold last:border-b-0"
             >
@@ -379,7 +379,7 @@ export default function Home() {
                           ? "/collaboration"
                           : link === "Business"
                             ? "/business"
-                          : "#contact"
+                          : "/contact"
                   }
                   className="block hover:text-white"
                 >
