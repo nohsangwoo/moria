@@ -15,7 +15,6 @@ const companyRows = [
   ["개업연월일", site.openingDate],
   ["업태", site.businessType],
   ["종목", site.businessItem],
-  ["사업장 소재지", `${site.address.region} ${site.address.locality} ${site.address.street} (${site.address.detail})`],
 ];
 
 const faqs = [
@@ -50,13 +49,6 @@ const structuredData = [
     foundingDate: site.openingDate,
     taxID: site.businessRegistration,
     email: site.email,
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: site.address.country,
-      addressRegion: site.address.region,
-      addressLocality: site.address.locality,
-      streetAddress: `${site.address.street} (${site.address.detail})`,
-    },
     knowsAbout: site.keywords,
     makesOffer: products.map((product) => ({
       "@type": "Offer",
@@ -292,8 +284,8 @@ export default function Home() {
               moriah는 사업자 아기돌풍이 운영합니다.
             </h2>
             <p className="mt-5 max-w-[720px] text-[12px] leading-6 text-[#333]">
-              사업자등록증 기준 정보를 footer와 구조화 데이터에 반영했습니다. 개인정보에 해당하는 생년월일은
-              공개 페이지에 노출하지 않습니다.
+              사업자등록증 기준 정보 중 공개 가능한 항목만 footer와 구조화 데이터에 반영했습니다. 개인정보에
+              가까운 항목은 공개 페이지에 노출하지 않습니다.
             </p>
           </div>
           <dl className="grid grid-cols-1 border-t border-black text-[11px] md:justify-self-end">
@@ -351,8 +343,6 @@ export default function Home() {
               상호 {site.legalName} | 대표 {site.owner} | 사업자등록번호 {site.businessRegistration}
               <br />
               업태 {site.businessType} | 종목 {site.businessItem} | 개업연월일 {site.openingDate}
-              <br />
-              {site.address.region} {site.address.locality} {site.address.street} ({site.address.detail})
               <br />
               문의 {site.email}
               <br />

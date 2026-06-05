@@ -30,15 +30,6 @@ export const site = {
   businessRegistration: "435-50-01307",
   owner: "김종란",
   email: "hello@moriah.work",
-  address: {
-    country: "KR",
-    region: "서울특별시",
-    locality: "노원구",
-    street: "한글비석로52길 54, 103동 408호",
-    detail: "상계동, 신동아아파트",
-    english:
-      "103-408, 54, Hangeulbiseok-ro 52-gil, Nowon-gu, Seoul, South Korea",
-  },
   businessType: "도매 및 소매업",
   businessItem: "해외직구대행업",
 };

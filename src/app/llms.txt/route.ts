@@ -28,7 +28,6 @@ ${stories.map((story) => `- ${story.meta}: ${story.text}`).join("\n")}
 - Business type: ${site.businessType}
 - Business item: ${site.businessItem}
 - Business registration: ${site.businessRegistration}
-- Address: ${site.address.english}
 - Email: ${site.email}
 `;
 
