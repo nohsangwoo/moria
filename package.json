@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "generate:images": "node scripts/generate-christian-assets.mjs",
+    "generate:brand-assets": "node scripts/generate-moriah-brand-assets.mjs",
+    "generate:seo-assets": "node scripts/generate-moriah-brand-assets.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
