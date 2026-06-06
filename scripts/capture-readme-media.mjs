@@ -178,7 +178,7 @@ async function capture() {
 
     if (route.path === "/contact") {
       await page.selectOption("select", "선물 패키지");
-      await page.fill('input[placeholder="예: 김종란 / 모리아"]', "포트폴리오 검증");
+      await page.fill('input[placeholder="예: 김종란 / 모퉁이"]', "포트폴리오 검증");
       await page.fill('input[placeholder="이메일 또는 전화번호"]', "hello@example.com");
       await page.fill("textarea", "README 데모 캡처를 위한 문의 폼 동작 확인입니다.");
       await page.waitForTimeout(contactPauseMs);

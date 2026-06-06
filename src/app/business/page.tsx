@@ -4,12 +4,12 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 const businessImages = {
-  founder: "/images/moriah/business/founder-reference.webp",
-  hero: "/images/moriah/business/hero-desk.webp",
-  office: "/images/moriah/business/office-window.webp",
-  documents: "/images/moriah/business/documents-desk.webp",
-  curation: "/images/moriah/business/curation-table.webp",
-  packing: "/images/moriah/business/packing-hands.webp",
+  founder: "/images/motungi/business/founder-reference.webp",
+  hero: "/images/motungi/business/hero-desk.webp",
+  office: "/images/motungi/business/office-window.webp",
+  documents: "/images/motungi/business/documents-desk.webp",
+  curation: "/images/motungi/business/curation-table.webp",
+  packing: "/images/motungi/business/packing-hands.webp",
 };
 
 const publicRows = [
@@ -25,14 +25,14 @@ const publicRows = [
 
 const timeline = [
   {
-    date: "Before moriah",
+    date: "Before 모퉁이",
     title: "선물의 쓰임을 먼저 살피는 일",
-    body: "moriah의 출발점은 눈에 띄는 장식보다 오래 곁에 남는 물건을 고르는 감각입니다. 김종란 대표는 받는 사람의 하루에 자연스럽게 놓일 수 있는 크기, 소재, 포장감을 먼저 확인하는 방식으로 브랜드의 방향을 세웠습니다.",
+    body: "모퉁이의 출발점은 눈에 띄는 장식보다 오래 곁에 남는 물건을 고르는 감각입니다. 김종란 대표는 받는 사람의 하루에 자연스럽게 놓일 수 있는 크기, 소재, 포장감을 먼저 확인하는 방식으로 브랜드의 방향을 세웠습니다.",
   },
   {
     date: "2026.06.01",
     title: "아기돌풍 개업",
-    body: "사업자등록증 기준 아기돌풍은 도매 및 소매업, 해외직구대행업을 사업 범위로 등록했습니다. moriah는 이 사업체가 운영하는 모던 크리스찬 악세사리 브랜드로 정리되었습니다.",
+    body: "사업자등록증 기준 아기돌풍은 도매 및 소매업, 해외직구대행업을 사업 범위로 등록했습니다. 모퉁이는 이 사업체가 운영하는 감각적인 굿즈 공식스토어로 정리되었습니다.",
   },
   {
     date: "2026.06.02",
@@ -42,7 +42,7 @@ const timeline = [
   {
     date: "Now",
     title: "작은 신앙의 표식을 현대적인 선물로",
-    body: "십자가 목걸이, 기도 팔찌, 기독교 선물 패키지처럼 조용하지만 분명한 의미를 가진 제품을 중심으로 선별과 포장, 협업 구성을 준비하고 있습니다.",
+    body: "십자가 목걸이, 기도 팔찌, 기독교 선물 굿즈처럼 조용하지만 분명한 의미를 가진 제품을 중심으로 선별과 포장, 협업 구성을 준비하고 있습니다.",
   },
 ];
 
@@ -80,9 +80,9 @@ const scope = [
 
 const faqs = [
   {
-    question: "moriah와 아기돌풍은 어떤 관계인가요?",
+    question: "모퉁이와 아기돌풍은 어떤 관계인가요?",
     answer:
-      "아기돌풍은 사업자등록증 기준 상호이고, moriah는 아기돌풍이 운영하는 모던 크리스찬 악세사리 브랜드입니다.",
+      "아기돌풍은 사업자등록증 기준 상호이고, 모퉁이는 아기돌풍이 운영하는 굿즈 공식스토어입니다.",
   },
   {
     question: "사업자 정보는 어디까지 공개하나요?",
@@ -102,12 +102,12 @@ const structuredData = [
     "@type": ["Organization", "OnlineStore"],
     name: site.name,
     legalName: site.legalName,
-    alternateName: ["moriah", "모리아", "아기돌풍"],
+    alternateName: ["모퉁이", "아기돌풍"],
     url: `${site.url}/business`,
     logo: `${site.url}${site.logo}`,
     image: `${site.url}${businessImages.hero}`,
     description:
-      "아기돌풍이 운영하는 moriah의 공개 사업자 정보와 김종란 대표의 브랜드 운영 철학을 소개합니다.",
+      "아기돌풍이 운영하는 모퉁이 굿즈 공식스토어의 공개 사업자 정보와 김종란 대표의 브랜드 운영 철학을 소개합니다.",
     foundingDate: site.openingDate,
     taxID: site.businessRegistration,
     email: site.email,
@@ -117,6 +117,8 @@ const structuredData = [
     },
     knowsAbout: [
       "크리스찬 악세사리",
+      "크리스찬 굿즈",
+      "기독교 굿즈",
       "기독교 선물",
       "십자가 목걸이",
       "기도 팔찌",
@@ -140,13 +142,14 @@ const structuredData = [
 export const metadata: Metadata = {
   title: "Business Info | 아기돌풍 김종란 대표",
   description:
-    "아기돌풍이 운영하는 moriah의 사업자 정보 페이지입니다. 김종란 대표, 사업자등록번호 435-50-01307, 도매 및 소매업, 해외직구대행업 정보를 안내합니다.",
+    "아기돌풍이 운영하는 모퉁이 굿즈 공식스토어의 사업자 정보 페이지입니다. 김종란 대표, 사업자등록번호 435-50-01307, 도매 및 소매업, 해외직구대행업 정보를 안내합니다.",
   keywords: [
     "아기돌풍",
     "김종란",
     "아기돌풍 사업자 정보",
-    "moriah business",
-    "모리아 사업자 정보",
+    "모퉁이 굿즈 사업자",
+    "모퉁이 business",
+    "모퉁이 사업자 정보",
     "크리스찬 악세사리 사업자",
     "기독교 선물 브랜드",
     "해외직구대행업",
@@ -156,21 +159,21 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Business Info | 아기돌풍 김종란 대표",
-    description: "moriah를 운영하는 아기돌풍의 공개 사업자 정보와 브랜드 운영 철학.",
+    description: "모퉁이 굿즈 자사몰을 운영하는 아기돌풍의 공개 사업자 정보와 브랜드 운영 철학.",
     url: `${site.url}/business`,
     images: [
       {
         url: businessImages.hero,
         width: 1536,
         height: 1024,
-        alt: "moriah business desk with Christian accessories",
+        alt: "모퉁이 business desk with Christian accessories",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Business Info | 아기돌풍 김종란 대표",
-    description: "아기돌풍이 운영하는 moriah의 공개 사업자 정보와 대표 스토리.",
+    description: "아기돌풍이 운영하는 모퉁이 굿즈 자사몰의 공개 사업자 정보와 대표 스토리.",
     images: [businessImages.hero],
   },
 };
@@ -189,10 +192,10 @@ export default function BusinessPage() {
         </Link>
         <Link
           href="/"
-          className="justify-self-center text-[17px] font-semibold tracking-[0.42em]"
-          aria-label="moriah home"
+          className="justify-self-center text-[17px] font-semibold tracking-[0.12em]"
+          aria-label="모퉁이 home"
         >
-          moriah
+          모퉁이
         </Link>
         <nav className="hidden items-center gap-4 justify-self-end text-[10px] font-semibold md:flex">
           <Link href="/news">News</Link>
@@ -210,10 +213,10 @@ export default function BusinessPage() {
             <h1 className="mt-5 break-keep text-[42px] font-extrabold leading-[1.04] md:text-[62px]">
               아기돌풍에서
               <br />
-              moriah까지.
+              모퉁이까지.
             </h1>
             <p className="mt-7 max-w-[430px] text-[12px] leading-7 text-[#333]">
-              moriah는 김종란 대표가 운영하는 사업체 아기돌풍의 브랜드입니다. 작은 신앙의 표식을
+              모퉁이는 김종란 대표가 운영하는 사업체 아기돌풍의 브랜드입니다. 작은 신앙의 표식을
               현대적인 선물과 일상의 악세사리로 전하기 위해, 공개 가능한 사업자 정보와 운영 기준을
               한곳에 정리했습니다.
             </p>
@@ -221,7 +224,7 @@ export default function BusinessPage() {
           <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100">
             <Image
               src={businessImages.hero}
-              alt="아기돌풍 moriah 사업자 정보와 크리스찬 악세사리 운영 무드를 담은 책상 이미지"
+              alt="아기돌풍 모퉁이 사업자 정보와 크리스찬 악세사리 운영 무드를 담은 책상 이미지"
               fill
               priority
               sizes="(min-width: 1120px) 720px, 100vw"
@@ -273,12 +276,12 @@ export default function BusinessPage() {
           </h2>
           <div className="mt-8 space-y-6 text-[12px] leading-7 text-[#333]">
             <p>
-              moriah의 제품은 화려하게 주장하기보다 받는 사람의 생활 안으로 조용히 들어가야 한다는
+              모퉁이의 제품은 화려하게 주장하기보다 받는 사람의 생활 안으로 조용히 들어가야 한다는
               생각에서 출발합니다. 김종란 대표가 브랜드를 정리하며 세운 기준은 단순합니다. 믿음을
               말하는 표식이되, 매일 착용해도 부담스럽지 않아야 한다는 것.
             </p>
             <p>
-              그래서 moriah는 크리스찬 악세사리를 기념품처럼만 다루지 않습니다. 목걸이의 길이,
+              그래서 모퉁이는 크리스찬 악세사리를 기념품처럼만 다루지 않습니다. 목걸이의 길이,
               팔찌의 촉감, 선물 포장의 여백, 이메일 문의의 답장 톤까지 하나의 경험으로 보고
               정리합니다.
             </p>
@@ -335,7 +338,7 @@ export default function BusinessPage() {
           <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100">
             <Image
               src={businessImages.curation}
-              alt="moriah 크리스찬 악세사리 선별 테이블"
+              alt="모퉁이 크리스찬 악세사리 선별 테이블"
               fill
               sizes="(min-width: 768px) 610px, 100vw"
               className="object-cover"
@@ -373,7 +376,7 @@ export default function BusinessPage() {
 
       <section className="mx-auto grid w-full max-w-[1120px] gap-10 px-5 pt-28 md:grid-cols-[1fr_420px] md:items-start md:px-0">
         <div>
-          <p className="text-[11px] font-semibold text-[#666]">How moriah works</p>
+          <p className="text-[11px] font-semibold text-[#666]">How 모퉁이 works</p>
           <h2 className="mt-3 text-[30px] font-extrabold leading-tight">여기까지 오게 된 흐름</h2>
           <div className="mt-10 border-y border-black">
             {timeline.map((item) => (
@@ -390,7 +393,7 @@ export default function BusinessPage() {
         <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100 md:mt-20">
           <Image
             src={businessImages.packing}
-            alt="moriah 선물 포장과 기독교 악세사리 패키징 이미지"
+            alt="모퉁이 선물 포장과 기독교 악세사리 패키징 이미지"
             fill
             sizes="(min-width: 768px) 420px, 100vw"
             className="object-cover"
@@ -423,7 +426,7 @@ export default function BusinessPage() {
           </p>
         </div>
         <a
-          href={`mailto:${site.email}?subject=moriah business inquiry`}
+          href={`mailto:${site.email}?subject=모퉁이 business inquiry`}
           className="inline-flex h-11 w-[210px] items-center justify-center border border-black bg-black text-[11px] font-semibold text-white"
         >
           사업 문의 보내기
@@ -433,7 +436,7 @@ export default function BusinessPage() {
       <footer className="bg-black px-5 py-20 text-white md:px-0">
         <div className="mx-auto grid w-full max-w-[1120px] gap-12 md:grid-cols-[1.5fr_0.8fr_0.8fr_1fr]">
           <div>
-            <p className="text-[22px] font-semibold tracking-[0.42em]">moriah</p>
+            <p className="text-[22px] font-semibold tracking-[0.12em]">모퉁이</p>
             <p className="mt-8 max-w-[520px] text-[10px] font-semibold leading-5 text-white/75">
               상호 {site.legalName} | 대표 {site.owner} | 사업자등록번호 {site.businessRegistration}
               <br />
@@ -445,7 +448,7 @@ export default function BusinessPage() {
           {[
             ["Brand", "Home", "News", "Collection", "Collaboration", "Business"],
             ["Business", site.legalName, site.owner, site.businessRegistration],
-            ["Contact", site.email, site.businessItem, "moriah.work"],
+            ["Contact", site.email, site.businessItem, site.apexDomain],
           ].map((group) => (
             <div key={group[0]} className="space-y-4 text-[11px] font-semibold text-white/75">
               {group.map((link) => (

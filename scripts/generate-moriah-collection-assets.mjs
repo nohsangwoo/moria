@@ -113,7 +113,7 @@ async function requestImage({ prompt, size, quality = "medium", inputImages = []
 }
 
 const sharedStyle = `
-Moriah modern Christian accessory collection editorial photography.
+모퉁이 modern Christian accessory collection editorial photography.
 Quiet Korean design brand, warm white negative space, black and white film accents,
 soft daylight, brushed silver, pale sky-blue enamel, muted terracotta, charcoal,
 minimal cross jewelry, prayer bracelet, gift packaging.
@@ -237,7 +237,7 @@ async function generateAsset(asset, apiKey) {
     if (!(await fileExists(directorPath))) {
       throw new Error("director-reference.webp must be generated before director edit assets.");
     }
-    inputImages = [await imagePartFromWebpAsPng(directorPath, "moriah-director-reference.png")];
+    inputImages = [await imagePartFromWebpAsPng(directorPath, "모퉁이-director-reference.png")];
   }
 
   const image = await requestImage(

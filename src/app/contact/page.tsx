@@ -5,10 +5,10 @@ import { site } from "@/lib/site";
 import { ContactComposer } from "./ContactComposer";
 
 const contactImages = {
-  hero: "/images/moriah/business/packing-hands.webp",
-  desk: "/images/moriah/business/documents-desk.webp",
-  gift: "/images/moriah/collaboration/gift-table.webp",
-  showroom: "/images/moriah/news/showroom-view.webp",
+  hero: "/images/motungi/business/packing-hands.webp",
+  desk: "/images/motungi/business/documents-desk.webp",
+  gift: "/images/motungi/collaboration/gift-table.webp",
+  showroom: "/images/motungi/news/showroom-view.webp",
 };
 
 const inquiryCards = [
@@ -51,10 +51,10 @@ const quickLinks = [
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "moriah Contact",
+  name: "모퉁이 Contact",
   url: `${site.url}/contact`,
   description:
-    "moriah 제품, 선물 패키지, 협업, 사업자 정보 문의를 위한 공식 Contact 페이지입니다.",
+    "모퉁이 굿즈 제품, 선물 패키지, 협업, 사업자 정보 문의를 위한 공식 Contact 페이지입니다.",
   mainEntity: {
     "@type": ["Organization", "OnlineStore"],
     name: site.name,
@@ -66,13 +66,13 @@ const structuredData = {
 };
 
 export const metadata: Metadata = {
-  title: "Contact | moriah 문의",
+  title: "Contact | 모퉁이 문의",
   description:
-    "moriah 제품 문의, 크리스찬 악세사리 선물 패키지, 교회/소모임 협업, 사업자 정보 확인을 위한 공식 Contact 페이지입니다.",
+    "모퉁이 굿즈 제품 문의, 선물 패키지, 브랜드/소모임 협업, 사업자 정보 확인을 위한 공식 Contact 페이지입니다.",
   keywords: [
-    "moriah contact",
-    "moriah 문의",
-    "모리아 문의",
+    "모퉁이 contact",
+    "모퉁이 문의",
+    "모퉁이 굿즈 문의",
     "아기돌풍 문의",
     "크리스찬 악세사리 문의",
     "기독교 선물 문의",
@@ -83,22 +83,22 @@ export const metadata: Metadata = {
     canonical: "/contact",
   },
   openGraph: {
-    title: "Contact | moriah 문의",
-    description: "제품, 선물 패키지, 협업, 사업자 정보 확인을 위한 moriah 공식 문의 페이지.",
+    title: "Contact | 모퉁이 문의",
+    description: "굿즈 제품, 선물 패키지, 협업, 사업자 정보 확인을 위한 모퉁이 공식 문의 페이지.",
     url: `${site.url}/contact`,
     images: [
       {
         url: contactImages.hero,
         width: 1536,
         height: 1024,
-        alt: "moriah contact gift packaging",
+        alt: "모퉁이 contact gift packaging",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact | moriah 문의",
-    description: "moriah 제품과 협업 문의를 메일로 정리해 보낼 수 있습니다.",
+    title: "Contact | 모퉁이 문의",
+    description: "모퉁이 굿즈 제품과 협업 문의를 메일로 정리해 보낼 수 있습니다.",
     images: [contactImages.hero],
   },
 };
@@ -117,10 +117,10 @@ export default function ContactPage() {
         </Link>
         <Link
           href="/"
-          className="justify-self-center text-[17px] font-semibold tracking-[0.42em]"
-          aria-label="moriah home"
+          className="justify-self-center text-[17px] font-semibold tracking-[0.12em]"
+          aria-label="모퉁이 home"
         >
-          moriah
+          모퉁이
         </Link>
         <nav className="hidden items-center gap-4 justify-self-end text-[10px] font-semibold md:flex">
           <Link href="/news">News</Link>
@@ -141,14 +141,14 @@ export default function ContactPage() {
               정확히 이어갑니다.
             </h1>
             <p className="mt-7 max-w-[440px] text-[12px] leading-7 text-[#333]">
-              제품 문의, 기독교 선물 패키지, 교회와 소모임 협업, 사업자 정보 확인까지 한 통의
-              메일로 정리해 주세요. moriah는 필요한 정보를 차분히 확인하고 가능한 범위를 안내합니다.
+              제품 문의, 선물 패키지, 브랜드와 소모임 협업, 사업자 정보 확인까지 한 통의
+              메일로 정리해 주세요. 모퉁이는 필요한 정보를 차분히 확인하고 가능한 범위를 안내합니다.
             </p>
           </div>
           <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100">
             <Image
               src={contactImages.hero}
-              alt="moriah 문의 페이지의 선물 포장 이미지"
+              alt="모퉁이 문의 페이지의 선물 포장 이미지"
               fill
               priority
               sizes="(min-width: 1120px) 720px, 100vw"
@@ -197,7 +197,7 @@ export default function ContactPage() {
           <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100">
             <Image
               src={contactImages.gift}
-              alt="moriah 선물 문의와 협업을 위한 제품 테이블"
+              alt="모퉁이 선물 문의와 협업을 위한 제품 테이블"
               fill
               sizes="(min-width: 768px) 570px, 100vw"
               className="object-cover"
@@ -206,7 +206,7 @@ export default function ContactPage() {
           <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100 md:mt-20">
             <Image
               src={contactImages.desk}
-              alt="moriah 사업자 정보와 문의 확인을 상징하는 문서 이미지"
+              alt="모퉁이 사업자 정보와 문의 확인을 상징하는 문서 이미지"
               fill
               sizes="(min-width: 768px) 520px, 100vw"
               className="object-cover"
@@ -262,7 +262,7 @@ export default function ContactPage() {
         <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100 md:mt-20">
           <Image
             src={contactImages.showroom}
-            alt="moriah 문의 전 참고할 수 있는 제품 쇼룸 이미지"
+            alt="모퉁이 문의 전 참고할 수 있는 제품 쇼룸 이미지"
             fill
             sizes="(min-width: 768px) 420px, 100vw"
             className="object-cover"
@@ -294,7 +294,7 @@ export default function ContactPage() {
       <footer className="bg-black px-5 py-20 text-white md:px-0">
         <div className="mx-auto grid w-full max-w-[1120px] gap-12 md:grid-cols-[1.5fr_0.8fr_0.8fr_1fr]">
           <div>
-            <p className="text-[22px] font-semibold tracking-[0.42em]">moriah</p>
+            <p className="text-[22px] font-semibold tracking-[0.12em]">모퉁이</p>
             <p className="mt-8 max-w-[520px] text-[10px] font-semibold leading-5 text-white/75">
               상호 {site.legalName} | 대표 {site.owner} | 사업자등록번호 {site.businessRegistration}
               <br />
@@ -306,7 +306,7 @@ export default function ContactPage() {
           {[
             ["Brand", "Home", "News", "Collection", "Collaboration"],
             ["Business", "Business Info", site.legalName, site.businessRegistration],
-            ["Contact", site.email, site.businessItem, "moriah.work"],
+            ["Contact", site.email, site.businessItem, site.apexDomain],
           ].map((group) => (
             <div key={group[0]} className="space-y-4 text-[11px] font-semibold text-white/75">
               {group.map((link) => (

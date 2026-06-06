@@ -30,7 +30,7 @@ async function fileExists(filePath) {
 }
 
 const sharedStyle = `
-Moriah modern Christian accessory news and showroom editorial photography.
+모퉁이 modern Christian accessory news and showroom editorial photography.
 Quiet Korean design brand, clean white exhibition-like space, soft stone wall,
 brushed silver cross jewelry, pale sky-blue enamel, muted terracotta accent,
 linen, warm daylight, calm premium product announcement mood.
@@ -53,7 +53,7 @@ editorial announcement composition with generous negative space.`,
     size: "1536x1024",
     quality: "medium",
     prompt: `${sharedStyle}
-Landscape image: small moriah seasonal showroom corner, stone plinths, silver cross pendants,
+Landscape image: small 모퉁이 seasonal showroom corner, stone plinths, silver cross pendants,
 prayer bracelets, blank cream cards, linen pouches, pale blue ribbons, quiet gallery layout.`,
   },
   {

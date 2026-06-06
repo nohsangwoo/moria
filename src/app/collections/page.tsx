@@ -4,15 +4,15 @@ import Link from "next/link";
 import { products, site } from "@/lib/site";
 
 const collectionImages = {
-  hero: "/images/moriah/collection/hero-studio.webp",
-  director: "/images/moriah/collection/director-table.webp",
-  hands: "/images/moriah/collection/hands-polish.webp",
-  wall: "/images/moriah/collection/wall-cross.webp",
-  material: "/images/moriah/collection/material-board.webp",
-  sketch: "/images/moriah/collection/sketch-desk.webp",
-  room: "/images/moriah/collection/prayer-room.webp",
-  wear: "/images/moriah/collection/wear-daily.webp",
-  gift: "/images/moriah/collection/gift-fold.webp",
+  hero: "/images/motungi/collection/hero-studio.webp",
+  director: "/images/motungi/collection/director-table.webp",
+  hands: "/images/motungi/collection/hands-polish.webp",
+  wall: "/images/motungi/collection/wall-cross.webp",
+  material: "/images/motungi/collection/material-board.webp",
+  sketch: "/images/motungi/collection/sketch-desk.webp",
+  room: "/images/motungi/collection/prayer-room.webp",
+  wear: "/images/motungi/collection/wear-daily.webp",
+  gift: "/images/motungi/collection/gift-fold.webp",
 };
 
 const notes = [
@@ -49,30 +49,30 @@ const related = [
 ];
 
 export const metadata: Metadata = {
-  title: "The Quiet Cross Series | moriah Collections",
+  title: "The Quiet Cross Series | 모퉁이 Collections",
   description:
-    "moriah의 첫 컬렉션 The Quiet Cross Series를 소개합니다. 십자가 목걸이, 기도 팔찌, 기독교 선물을 위한 제작 노트와 착용 장면을 담았습니다.",
+    "모퉁이의 첫 컬렉션 The Quiet Cross Series를 소개합니다. 의미 있는 악세사리와 선물 오브제를 위한 제작 노트와 착용 장면을 담았습니다.",
   alternates: {
     canonical: "/collections",
   },
   openGraph: {
-    title: "The Quiet Cross Series | moriah Collections",
+    title: "The Quiet Cross Series | 모퉁이 Collections",
     description:
-      "십자가 목걸이와 기도 팔찌를 조용한 일상의 표식으로 제안하는 moriah 컬렉션 노트.",
+      "십자가 목걸이와 기도 팔찌를 조용한 일상의 표식으로 제안하는 모퉁이 크리스찬 굿즈 컬렉션 노트.",
     url: `${site.url}/collections`,
     images: [
       {
         url: collectionImages.hero,
         width: 1536,
         height: 1024,
-        alt: "moriah The Quiet Cross Series collection studio",
+        alt: "모퉁이 The Quiet Cross Series collection studio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Quiet Cross Series | moriah Collections",
-    description: "moriah 첫 컬렉션의 제작 노트와 착용 장면.",
+    title: "The Quiet Cross Series | 모퉁이 Collections",
+    description: "모퉁이 첫 크리스찬 굿즈 컬렉션의 제작 노트와 착용 장면.",
     images: [collectionImages.hero],
   },
 };
@@ -86,10 +86,10 @@ export default function CollectionsPage() {
         </Link>
         <Link
           href="/"
-          className="justify-self-center text-[17px] font-semibold tracking-[0.42em]"
-          aria-label="moriah home"
+          className="justify-self-center text-[17px] font-semibold tracking-[0.12em]"
+          aria-label="모퉁이 home"
         >
-          moriah
+          모퉁이
         </Link>
         <nav className="hidden items-center gap-4 justify-self-end text-[10px] font-semibold md:flex">
           <Link href="/news">News</Link>
@@ -107,14 +107,14 @@ export default function CollectionsPage() {
           The Quiet Cross Series
         </h1>
         <p className="mt-5 max-w-[520px] text-[12px] leading-6 text-[#444]">
-          하루의 소란을 지나 손목과 목선에 남는 작은 표식. moriah의 첫 컬렉션은 믿음을 크게 외치기보다,
+          하루의 소란을 지나 손목과 목선에 남는 작은 표식. 모퉁이의 첫 컬렉션은 믿음을 크게 외치기보다,
           조용히 오래 곁에 두는 물건을 상상하며 시작했습니다.
         </p>
 
         <div className="relative mt-10 aspect-[1536/1024] overflow-hidden bg-neutral-100">
           <Image
             src={collectionImages.hero}
-            alt="moriah 컬렉션 스튜디오에서 십자가 악세사리를 정리하는 디렉터"
+            alt="모퉁이 컬렉션 스튜디오에서 십자가 악세사리를 정리하는 디렉터"
             fill
             priority
             sizes="(min-width: 768px) 760px, 100vw"
@@ -158,7 +158,7 @@ export default function CollectionsPage() {
           <div className="relative aspect-[1024/1536] overflow-hidden bg-neutral-100">
             <Image
               src={collectionImages.director}
-              alt="moriah 컬렉션 디렉터가 십자가 목걸이 체인을 살펴보는 장면"
+              alt="모퉁이 컬렉션 디렉터가 십자가 목걸이 체인을 살펴보는 장면"
               fill
               sizes="(min-width: 768px) 320px, 100vw"
               className="object-cover"
@@ -206,7 +206,7 @@ export default function CollectionsPage() {
           <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100">
             <Image
               src={collectionImages.material}
-              alt="moriah 컬렉션 소재 보드와 십자가 참"
+              alt="모퉁이 컬렉션 소재 보드와 십자가 참"
               fill
               sizes="(min-width: 768px) 370px, 100vw"
               className="object-cover"
@@ -246,7 +246,7 @@ export default function CollectionsPage() {
           <div className="relative aspect-[1024/1536] w-full overflow-hidden bg-neutral-100 md:ml-auto md:w-[520px]">
             <Image
               src={collectionImages.wear}
-              alt="기도 팔찌를 착용하고 컵을 든 moriah 디렉터"
+              alt="기도 팔찌를 착용하고 컵을 든 모퉁이 디렉터"
               fill
               sizes="(min-width: 768px) 520px, 100vw"
               className="object-cover"
@@ -254,7 +254,7 @@ export default function CollectionsPage() {
           </div>
           <p className="mt-9 max-w-[620px] text-[12px] leading-7 text-[#333]">
             착용 컷에서는 악세사리가 얼굴보다 먼저 말하지 않게 했습니다. 소매 아래에서 한 번 보이고,
-            컵을 들 때 다시 보이는 정도. 이 조용한 반복이 moriah가 생각하는 크리스찬 악세사리의 일상성입니다.
+            컵을 들 때 다시 보이는 정도. 이 조용한 반복이 모퉁이가 생각하는 크리스찬 악세사리의 일상성입니다.
           </p>
         </section>
 
@@ -262,7 +262,7 @@ export default function CollectionsPage() {
           <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100">
             <Image
               src={collectionImages.gift}
-              alt="moriah 선물 포장과 십자가 목걸이를 정리하는 손"
+              alt="모퉁이 선물 포장과 십자가 목걸이를 정리하는 손"
               fill
               sizes="(min-width: 768px) 760px, 100vw"
               className="object-cover"
@@ -323,7 +323,7 @@ export default function CollectionsPage() {
       <footer className="bg-black px-5 py-20 text-white md:px-0">
         <div className="mx-auto grid w-full max-w-[760px] gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <p className="text-[22px] font-semibold tracking-[0.42em]">moriah</p>
+            <p className="text-[22px] font-semibold tracking-[0.12em]">모퉁이</p>
             <p className="mt-8 text-[10px] font-semibold leading-5 text-white/75">
               상호 {site.legalName} | 대표 {site.owner}
               <br />

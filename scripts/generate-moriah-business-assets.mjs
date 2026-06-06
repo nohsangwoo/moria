@@ -96,7 +96,7 @@ async function requestImage({ prompt, size, quality = "medium", inputImages = []
 }
 
 const sharedStyle = `
-Moriah modern Christian accessories business editorial photography.
+모퉁이 modern Christian accessories business editorial photography.
 Korean small brand founder mood, quiet confidence, warm white studio, brushed silver cross jewelry,
 prayer bracelet, linen packaging, pale sky-blue accent, charcoal, cream, soft daylight, premium but modest.
 No visible text, no readable words, no logo, no watermark, no UI, no border.
@@ -180,7 +180,7 @@ async function generateAsset(asset, apiKey) {
     if (!(await fileExists(founderPath))) {
       throw new Error("founder-reference.webp must be generated before founder edit assets.");
     }
-    inputImages = [await imagePartFromWebpAsPng(founderPath, "moriah-founder-reference.png")];
+    inputImages = [await imagePartFromWebpAsPng(founderPath, "모퉁이-founder-reference.png")];
   }
 
   const image = await requestImage(

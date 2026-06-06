@@ -4,13 +4,13 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 const collaborationImages = {
-  hero: "/images/moriah/collaboration/hero-partnership.webp",
-  giftTable: "/images/moriah/collaboration/gift-table.webp",
-  partnerReview: "/images/moriah/collaboration/partner-review.webp",
-  customKit: "/images/moriah/collaboration/custom-kit.webp",
-  retailDisplay: "/images/moriah/collaboration/retail-display.webp",
-  workshopHands: "/images/moriah/collaboration/workshop-hands.webp",
-  closingBundles: "/images/moriah/collaboration/closing-bundles.webp",
+  hero: "/images/motungi/collaboration/hero-partnership.webp",
+  giftTable: "/images/motungi/collaboration/gift-table.webp",
+  partnerReview: "/images/motungi/collaboration/partner-review.webp",
+  customKit: "/images/motungi/collaboration/custom-kit.webp",
+  retailDisplay: "/images/motungi/collaboration/retail-display.webp",
+  workshopHands: "/images/motungi/collaboration/workshop-hands.webp",
+  closingBundles: "/images/motungi/collaboration/closing-bundles.webp",
 };
 
 const partnerTracks = [
@@ -65,30 +65,30 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Collaboration | moriah",
+  title: "Collaboration | 모퉁이",
   description:
-    "moriah 협업 페이지입니다. 교회 선물, 소모임 기프트, 브랜드 협업, 편집숍 팝업을 위한 모던 크리스찬 악세사리 큐레이션을 제안합니다.",
+    "모퉁이 협업 페이지입니다. 교회 굿즈, 소모임 선물, 브랜드 협업, 편집숍 팝업을 위한 모던 크리스찬 굿즈와 악세사리 큐레이션을 제안합니다.",
   alternates: {
     canonical: "/collaboration",
   },
   openGraph: {
-    title: "Collaboration | moriah",
+    title: "Collaboration | 모퉁이",
     description:
-      "교회 선물과 브랜드 협업을 위한 moriah의 모던 크리스찬 악세사리 파트너십.",
+      "교회 선물과 브랜드 협업을 위한 모퉁이의 모던 크리스찬 굿즈 파트너십.",
     url: `${site.url}/collaboration`,
     images: [
       {
         url: collaborationImages.hero,
         width: 1536,
         height: 1024,
-        alt: "moriah Christian accessory collaboration table",
+        alt: "모퉁이 Christian accessory collaboration table",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Collaboration | moriah",
-    description: "교회 선물, 브랜드 협업, 편집숍 팝업을 위한 moriah 협업 안내.",
+    title: "Collaboration | 모퉁이",
+    description: "교회 굿즈, 브랜드 협업, 편집숍 팝업을 위한 모퉁이 협업 안내.",
     images: [collaborationImages.hero],
   },
 };
@@ -102,10 +102,10 @@ export default function CollaborationPage() {
         </Link>
         <Link
           href="/"
-          className="justify-self-center text-[17px] font-semibold tracking-[0.42em]"
-          aria-label="moriah home"
+          className="justify-self-center text-[17px] font-semibold tracking-[0.12em]"
+          aria-label="모퉁이 home"
         >
-          moriah
+          모퉁이
         </Link>
         <nav className="hidden items-center gap-4 justify-self-end text-[10px] font-semibold md:flex">
           <Link href="/news">News</Link>
@@ -126,14 +126,14 @@ export default function CollaborationPage() {
               shared meaning.
             </h1>
             <p className="mt-6 max-w-[430px] text-[12px] leading-7 text-[#333]">
-              moriah는 십자가 목걸이와 기도 팔찌를 단순한 굿즈가 아니라 오래 남는 선물 경험으로
+              모퉁이는 십자가 목걸이와 기도 팔찌를 단순한 굿즈가 아니라 오래 남는 선물 경험으로
               큐레이션합니다. 교회, 소모임, 브랜드, 편집숍과 함께 조용하지만 분명한 협업을 만듭니다.
             </p>
           </div>
           <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100">
             <Image
               src={collaborationImages.hero}
-              alt="moriah 협업 테이블 위의 십자가 악세사리와 선물 패키지"
+              alt="모퉁이 협업 테이블 위의 십자가 악세사리와 선물 패키지"
               fill
               priority
               sizes="(min-width: 1120px) 680px, 100vw"
@@ -145,7 +145,7 @@ export default function CollaborationPage() {
 
       <section className="mx-auto grid w-full max-w-[1120px] gap-8 px-5 pt-20 md:grid-cols-[260px_1fr] md:px-0">
         <div>
-          <p className="text-[11px] font-semibold text-[#666]">moriah partnership note</p>
+          <p className="text-[11px] font-semibold text-[#666]">모퉁이 partnership note</p>
           <h2 className="mt-3 text-[26px] font-extrabold leading-tight">
             함께 만든 선물이
             <br />
@@ -158,7 +158,7 @@ export default function CollaborationPage() {
             지나온 계절, 고마운 사람에게 건네고 싶은 마음을 먼저 듣고 제품과 포장, 전달 방식을 맞춥니다.
           </p>
           <p>
-            moriah의 협업은 크게 보이는 캠페인보다 손에 남는 경험을 지향합니다. 리본의 색, 카드의 여백,
+            모퉁이의 협업은 크게 보이는 캠페인보다 손에 남는 경험을 지향합니다. 리본의 색, 카드의 여백,
             제품을 꺼내는 순서까지 하나의 조용한 장면으로 설계합니다.
           </p>
         </div>
@@ -192,7 +192,7 @@ export default function CollaborationPage() {
         <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100">
           <Image
             src={collaborationImages.giftTable}
-            alt="교회와 소모임 선물을 위한 moriah 기프트 테이블"
+            alt="교회와 소모임 선물을 위한 모퉁이 기프트 테이블"
             fill
             sizes="(min-width: 768px) 430px, 100vw"
             className="object-cover"
@@ -204,7 +204,7 @@ export default function CollaborationPage() {
         <div className="relative aspect-[1024/1536] overflow-hidden bg-neutral-100">
           <Image
             src={collaborationImages.partnerReview}
-            alt="moriah 협업 파트너가 패키지 샘플을 함께 검토하는 장면"
+            alt="모퉁이 협업 파트너가 패키지 샘플을 함께 검토하는 장면"
             fill
             sizes="(min-width: 768px) 380px, 100vw"
             className="object-cover"
@@ -245,7 +245,7 @@ export default function CollaborationPage() {
           <div className="relative aspect-[1024/1536] overflow-hidden bg-neutral-100 md:mt-24">
             <Image
               src={collaborationImages.retailDisplay}
-              alt="편집숍과 팝업을 위한 moriah 악세사리 디스플레이"
+              alt="편집숍과 팝업을 위한 모퉁이 악세사리 디스플레이"
               fill
               sizes="(min-width: 768px) 570px, 100vw"
               className="object-cover"
@@ -269,7 +269,7 @@ export default function CollaborationPage() {
         <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100 md:mt-20">
           <Image
             src={collaborationImages.workshopHands}
-            alt="여러 사람이 moriah 선물 패키지를 함께 조립하는 손 작업 장면"
+            alt="여러 사람이 모퉁이 선물 패키지를 함께 조립하는 손 작업 장면"
             fill
             sizes="(min-width: 768px) 420px, 100vw"
             className="object-cover"
@@ -281,7 +281,7 @@ export default function CollaborationPage() {
         <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100">
           <Image
             src={collaborationImages.closingBundles}
-            alt="완성된 moriah 협업 선물 번들"
+            alt="완성된 모퉁이 협업 선물 번들"
             fill
             sizes="(min-width: 1120px) 1120px, 100vw"
             className="object-cover"
@@ -338,11 +338,11 @@ export default function CollaborationPage() {
           </h2>
           <p className="mt-6 max-w-[650px] text-[12px] leading-7 text-[#333]">
             제품명보다 먼저 필요한 것은 마음의 방향입니다. 어떤 사람에게 어떤 기억으로 남기고 싶은지 보내주시면,
-            moriah의 톤 안에서 가능한 협업 구성을 제안하겠습니다.
+            모퉁이의 톤 안에서 가능한 협업 구성을 제안하겠습니다.
           </p>
         </div>
         <a
-          href={`mailto:${site.email}?subject=moriah collaboration inquiry`}
+          href={`mailto:${site.email}?subject=모퉁이 collaboration inquiry`}
           className="inline-flex h-11 w-[210px] items-center justify-center border border-black bg-black text-[11px] font-semibold text-white"
         >
           협업 문의 보내기
@@ -352,7 +352,7 @@ export default function CollaborationPage() {
       <footer className="bg-black px-5 py-20 text-white md:px-0">
         <div className="mx-auto grid w-full max-w-[1120px] gap-12 md:grid-cols-[1.5fr_0.8fr_0.8fr_1fr]">
           <div>
-            <p className="text-[22px] font-semibold tracking-[0.42em]">moriah</p>
+            <p className="text-[22px] font-semibold tracking-[0.12em]">모퉁이</p>
             <p className="mt-8 max-w-[520px] text-[10px] font-semibold leading-5 text-white/75">
               상호 {site.legalName} | 대표 {site.owner} | 사업자등록번호 {site.businessRegistration}
               <br />
@@ -364,7 +364,7 @@ export default function CollaborationPage() {
           {[
             ["Brand", "Home", "News", "Collection", "Collaboration", "Business"],
             ["Partnership", "Church gift", "Custom kit", "Retail display"],
-            ["Contact", site.email, site.businessItem, "moriah.work"],
+            ["Contact", site.email, site.businessItem, site.apexDomain],
           ].map((group) => (
             <div key={group[0]} className="space-y-4 text-[11px] font-semibold text-white/75">
               {group.map((link) => (

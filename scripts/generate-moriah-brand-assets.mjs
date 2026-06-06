@@ -1,20 +1,21 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
 
 const root = process.cwd();
 const brandDir = path.join(root, "public", "brand");
 const faviconPath = path.join(root, "src", "app", "favicon.ico");
-const heroPath = path.join(root, "public", "images", "moriah", "hero.webp");
+const bundledLogoSourcePath = path.join(brandDir, "motungi-logo-source.png");
+const fallbackDownloadLogoPath =
+  "C:\\Users\\nsgr1\\Downloads\\ChatGPT Image 2026년 6월 6일 오후 11_37_22.png";
 
 const palette = {
-  ink: "#050505",
-  paper: "#f7f5f1",
-  clay: "#c47a55",
-  sky: "#b9d8ef",
-  gold: "#d8ad50",
-  line: "#d8d1c7",
-  muted: "#5e5750",
+  ink: "#10100f",
+  paper: "#fbfaf7",
+  line: "#e6e0d7",
+  muted: "#4f5b69",
+  soft: "#8b8278",
 };
 
 function escapeXml(value) {
@@ -26,61 +27,34 @@ function escapeXml(value) {
     .replaceAll("'", "&apos;");
 }
 
-function iconSvg(size) {
-  const stroke = Math.round(size * 0.072);
+function logoMarkSvg(size) {
+  const s = size;
   return `
-  <svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
-    <rect width="${size}" height="${size}" rx="${Math.round(size * 0.18)}" fill="${palette.ink}"/>
-    <circle cx="${size * 0.68}" cy="${size * 0.29}" r="${size * 0.18}" fill="${palette.sky}"/>
-    <path d="M${size * 0.5} ${size * 0.2} V${size * 0.74} M${size * 0.32} ${size * 0.39} H${size * 0.68}" fill="none" stroke="#ffffff" stroke-width="${stroke}" stroke-linecap="round"/>
-    <circle cx="${size * 0.35}" cy="${size * 0.73}" r="${size * 0.07}" fill="${palette.gold}"/>
-    <path d="M${size * 0.61} ${size * 0.68} L${size * 0.75} ${size * 0.82}" stroke="${palette.clay}" stroke-width="${Math.round(size * 0.045)}" stroke-linecap="round"/>
-  </svg>`;
-}
-
-function ogTextSvg(width, height) {
-  const title = "The Quiet Cross Series";
-  const subtitle = "모던 크리스찬 악세사리";
-  const description = "십자가 목걸이 · 기도 팔찌 · 기독교 선물";
-  const operator = "사업자 아기돌풍 · 435-50-01307";
-
-  return `
-  <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
-    <rect width="${width}" height="${height}" fill="${palette.paper}"/>
-    <path d="M0 476 C 160 410, 290 540, 525 464 C 590 444, 645 442, 710 470 L710 630 L0 630 Z" fill="#ebe4db"/>
-    <g opacity="0.52" stroke="${palette.line}" stroke-width="1">
-      ${Array.from({ length: 9 }, (_, index) => `<path d="M${index * 72} 0 V${height}"/>`).join("")}
-      ${Array.from({ length: 6 }, (_, index) => `<path d="M0 ${index * 96} H720"/>`).join("")}
-    </g>
-    <text x="76" y="112" fill="${palette.ink}" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="14">moriah</text>
-    <path d="M80 166 H220" stroke="${palette.ink}" stroke-width="2"/>
-    <text x="76" y="250" fill="${palette.ink}" font-family="Arial, Helvetica, sans-serif" font-size="49" font-weight="800">${escapeXml(title)}</text>
-    <text x="78" y="314" fill="${palette.ink}" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="800">${escapeXml(subtitle)}</text>
-    <text x="80" y="374" fill="${palette.muted}" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">${escapeXml(description)}</text>
-    <g transform="translate(80 456)">
-      <rect width="292" height="46" rx="23" fill="${palette.ink}"/>
-      <text x="28" y="30" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800">${escapeXml(operator)}</text>
-    </g>
-    <g transform="translate(480 456)">
-      <path d="M55 0 V88 M18 33 H92" fill="none" stroke="${palette.ink}" stroke-width="11" stroke-linecap="round"/>
-      <circle cx="98" cy="18" r="24" fill="${palette.sky}"/>
-      <circle cx="10" cy="82" r="13" fill="${palette.gold}"/>
-    </g>
-  </svg>`;
-}
-
-function rightOverlaySvg(width, height) {
-  return `
-  <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+  <svg xmlns="http://www.w3.org/2000/svg" width="${s}" height="${s}" viewBox="0 0 ${s} ${s}">
     <defs>
-      <linearGradient id="fade" x1="0" x2="1" y1="0" y2="0">
-        <stop offset="0" stop-color="#f7f5f1" stop-opacity="0.35"/>
-        <stop offset="0.38" stop-color="#050505" stop-opacity="0"/>
-        <stop offset="1" stop-color="#050505" stop-opacity="0.12"/>
+      <linearGradient id="top" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0" stop-color="#d8d3ca"/>
+        <stop offset="1" stop-color="#bfb8ae"/>
       </linearGradient>
+      <linearGradient id="left" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/>
+        <stop offset="1" stop-color="#e5ded5"/>
+      </linearGradient>
+      <linearGradient id="right" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0" stop-color="#30302f"/>
+        <stop offset="1" stop-color="#111110"/>
+      </linearGradient>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="${s * 0.018}" stdDeviation="${s * 0.022}" flood-color="#000000" flood-opacity="0.16"/>
+      </filter>
     </defs>
-    <rect width="${width}" height="${height}" fill="url(#fade)"/>
-    <rect x="0" y="0" width="1" height="${height}" fill="#f7f5f1" opacity="0.7"/>
+    <g filter="url(#shadow)" transform="translate(${s * 0.16} ${s * 0.12}) scale(${s / 512})">
+      <path d="M28 26 H394 V78 L220 177 C199 189 178 188 158 176 L28 98 Z" fill="url(#top)"/>
+      <path d="M28 98 L158 176 C178 188 199 189 220 177 L220 448 H28 Z" fill="url(#left)"/>
+      <path d="M244 179 L394 94 V448 H244 Z" fill="url(#right)"/>
+      <path d="M28 98 L158 176 C178 188 199 189 220 177 L394 78" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="square" stroke-linejoin="round"/>
+      <path d="M220 177 C232 171 241 174 244 184 V448" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+    </g>
   </svg>`;
 }
 
@@ -110,46 +84,97 @@ function makeIco(images) {
   return Buffer.concat([header, ...entries, ...images.map((image) => image.buffer)]);
 }
 
-async function writePng(filePath, svg, size) {
-  await sharp(Buffer.from(svg)).resize(size, size).png().toFile(filePath);
+async function ensureLogoSource() {
+  await mkdir(brandDir, { recursive: true });
+  if (existsSync(bundledLogoSourcePath)) return;
+
+  const sourcePath = process.env.MOTUNGI_LOGO_SOURCE_PATH ?? fallbackDownloadLogoPath;
+  if (!existsSync(sourcePath)) {
+    throw new Error(`Logo source image was not found: ${sourcePath}`);
+  }
+
+  await copyFile(sourcePath, bundledLogoSourcePath);
 }
 
-async function writeOg(filePath) {
+async function writeLogoIcons() {
+  const markSvg = Buffer.from(logoMarkSvg(512));
+
+  await sharp(markSvg).png().toFile(path.join(brandDir, "motungi-logo-mark.png"));
+  await sharp(markSvg).resize(180, 180).png().toFile(path.join(brandDir, "apple-touch-icon.png"));
+  await sharp(markSvg).resize(192, 192).png().toFile(path.join(brandDir, "icon-192.png"));
+  await sharp(markSvg).resize(512, 512).png().toFile(path.join(brandDir, "icon-512.png"));
+
+  const icoImages = await Promise.all(
+    [16, 32, 48, 64].map(async (size) => ({
+      size,
+      buffer: await sharp(markSvg).resize(size, size).png().toBuffer(),
+    })),
+  );
+
+  await writeFile(faviconPath, makeIco(icoImages));
+}
+
+function minimalOgSvg(width, height) {
+  return `
+  <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+    <defs>
+      <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="10" stdDeviation="28" flood-color="#000000" flood-opacity="0.06"/>
+      </filter>
+    </defs>
+    <rect width="${width}" height="${height}" rx="0" fill="${palette.paper}"/>
+    <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" fill="none" stroke="${palette.line}" stroke-width="1"/>
+    <g filter="url(#softShadow)">
+      <rect x="64" y="58" width="1072" height="514" rx="0" fill="#ffffff" opacity="0.58"/>
+    </g>
+    <g transform="translate(74 122)">
+      <text
+        x="0"
+        y="96"
+        fill="${palette.ink}"
+        font-family="Segoe UI, Helvetica Neue, Arial, sans-serif"
+        font-size="96"
+        font-weight="300"
+        letter-spacing="24">${escapeXml("motungi")}</text>
+      <text
+        x="2"
+        y="268"
+        fill="${palette.ink}"
+        font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, Arial, sans-serif"
+        font-size="36"
+        font-weight="800">${escapeXml("모퉁이 공식스토어")}</text>
+      <text
+        x="2"
+        y="322"
+        fill="${palette.muted}"
+        font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, Arial, sans-serif"
+        font-size="30"
+        font-weight="500">${escapeXml("일상의 모퉁이에 놓이는 감각적인 오브젝트 브랜드, motungi")}</text>
+      <text
+        x="4"
+        y="402"
+        fill="${palette.soft}"
+        font-family="Segoe UI, Helvetica Neue, Arial, sans-serif"
+        font-size="22"
+        font-weight="500"
+        letter-spacing="1.8">${escapeXml("www.motungistudio.com")}</text>
+    </g>
+  </svg>`;
+}
+
+async function composeOg(filePath) {
   const width = 1200;
   const height = 630;
-  const hero = await sharp(heroPath)
-    .resize(560, height, { fit: "cover", position: "center" })
-    .modulate({ brightness: 0.98, saturation: 0.88 })
-    .png()
-    .toBuffer();
-
-  await sharp(Buffer.from(ogTextSvg(width, height)))
-    .composite([
-      { input: hero, left: 640, top: 0 },
-      { input: Buffer.from(rightOverlaySvg(560, height)), left: 640, top: 0 },
-    ])
+  await sharp(Buffer.from(minimalOgSvg(width, height)))
     .png()
     .toFile(filePath);
 }
 
 async function main() {
-  await mkdir(brandDir, { recursive: true });
-
-  const icon = iconSvg(512);
-  await writePng(path.join(brandDir, "apple-touch-icon.png"), icon, 180);
-  await writePng(path.join(brandDir, "icon-192.png"), icon, 192);
-  await writePng(path.join(brandDir, "icon-512.png"), icon, 512);
-  await writeOg(path.join(brandDir, "og-image.png"));
-  await writeOg(path.join(brandDir, "twitter-image.png"));
-
-  const icoImages = await Promise.all(
-    [16, 32, 48].map(async (size) => ({
-      size,
-      buffer: await sharp(Buffer.from(icon)).resize(size, size).png().toBuffer(),
-    })),
-  );
-
-  await writeFile(faviconPath, makeIco(icoImages));
+  await ensureLogoSource();
+  await writeLogoIcons();
+  await composeOg(path.join(brandDir, "og-image.png"));
+  await composeOg(path.join(brandDir, "twitter-image.png"));
 }
 
 main().catch((error) => {

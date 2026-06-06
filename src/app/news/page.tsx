@@ -4,13 +4,13 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 const newsImages = {
-  hero: "/images/moriah/news/hero-showroom.webp",
-  showroom: "/images/moriah/news/showroom-view.webp",
-  visitor: "/images/moriah/news/visitor-wear.webp",
-  pendant: "/images/moriah/news/new-pendant.webp",
-  bracelet: "/images/moriah/news/prayer-bracelet-news.webp",
-  partner: "/images/moriah/news/partner-note.webp",
-  guide: "/images/moriah/news/map-card.webp",
+  hero: "/images/motungi/news/hero-showroom.webp",
+  showroom: "/images/motungi/news/showroom-view.webp",
+  visitor: "/images/motungi/news/visitor-wear.webp",
+  pendant: "/images/motungi/news/new-pendant.webp",
+  bracelet: "/images/motungi/news/prayer-bracelet-news.webp",
+  partner: "/images/motungi/news/partner-note.webp",
+  guide: "/images/motungi/news/map-card.webp",
 };
 
 const newsItems = [
@@ -35,7 +35,7 @@ const newsItems = [
     type: "Collaboration call",
     date: "2026.06.28",
     image: newsImages.partner,
-    body: "교회 선물, 편집숍 팝업, 콘텐츠 협업을 위한 시즌 파트너 문의를 열었습니다. 작은 수량의 선물부터 공동 큐레이션까지 moriah의 톤 안에서 검토합니다.",
+    body: "교회 선물, 편집숍 팝업, 콘텐츠 협업을 위한 시즌 파트너 문의를 열었습니다. 작은 수량의 선물부터 공동 큐레이션까지 모퉁이의 톤 안에서 검토합니다.",
     details: ["For : church, group, retail, creator", "Format : gift kit, display, limited package", "Contact : email inquiry"],
   },
 ];
@@ -48,29 +48,29 @@ const schedule = [
 ];
 
 export const metadata: Metadata = {
-  title: "News | moriah Season Letter",
+  title: "News | 모퉁이 Season Letter",
   description:
-    "moriah의 새 소식 페이지입니다. Season Letter 2026, 신제품 노트, 쇼룸 프리뷰, 교회 선물과 브랜드 협업 안내를 확인하세요.",
+    "모퉁이의 새 소식 페이지입니다. Season Letter 2026, 신제품 굿즈 노트, 쇼룸 프리뷰, 교회 선물과 브랜드 협업 안내를 확인하세요.",
   alternates: {
     canonical: "/news",
   },
   openGraph: {
-    title: "News | moriah Season Letter",
-    description: "moriah Season Letter 2026, 새 제품과 협업 소식을 전합니다.",
+    title: "News | 모퉁이 Season Letter",
+    description: "모퉁이 Season Letter 2026, 새 크리스찬 굿즈와 협업 소식을 전합니다.",
     url: `${site.url}/news`,
     images: [
       {
         url: newsImages.hero,
         width: 1536,
         height: 1024,
-        alt: "moriah season letter showroom wall",
+        alt: "모퉁이 season letter showroom wall",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "News | moriah Season Letter",
-    description: "moriah 새 제품과 시즌 쇼룸 소식.",
+    title: "News | 모퉁이 Season Letter",
+    description: "모퉁이 새 굿즈와 시즌 쇼룸 소식.",
     images: [newsImages.hero],
   },
 };
@@ -84,10 +84,10 @@ export default function NewsPage() {
         </Link>
         <Link
           href="/"
-          className="justify-self-center text-[17px] font-semibold tracking-[0.42em]"
-          aria-label="moriah home"
+          className="justify-self-center text-[17px] font-semibold tracking-[0.12em]"
+          aria-label="모퉁이 home"
         >
-          moriah
+          모퉁이
         </Link>
         <nav className="hidden items-center gap-4 justify-self-end text-[10px] font-semibold md:flex">
           <Link href="/news">News</Link>
@@ -101,7 +101,7 @@ export default function NewsPage() {
         <div className="relative mx-auto h-[clamp(540px,58vw,820px)] w-full max-w-[1600px]">
           <Image
             src={newsImages.hero}
-            alt="moriah 시즌 쇼룸 벽면에 걸린 십자가 목걸이와 안내 카드"
+            alt="모퉁이 시즌 쇼룸 벽면에 걸린 십자가 목걸이와 안내 카드"
             fill
             priority
             sizes="100vw"
@@ -121,19 +121,19 @@ export default function NewsPage() {
               <br />
               Online Showroom
               <br />
-              moriah.work/news
+              motungistudio.com/news
             </p>
           </div>
         </div>
       </section>
 
       <section className="mx-auto w-full max-w-[760px] px-5 py-20 text-center md:px-0">
-        <p className="text-[12px] font-extrabold uppercase tracking-[0.18em]">Moriah News</p>
+        <p className="text-[12px] font-extrabold uppercase tracking-[0.18em]">모퉁이 News</p>
         <h1 className="mt-5 text-[31px] font-extrabold leading-tight md:text-[44px]">
           Season Letter 2026
         </h1>
         <p className="mx-auto mt-7 max-w-[560px] text-[12px] leading-7 text-[#333]">
-          moriah의 새 소식은 큰 발표보다 조용한 편지에 가깝습니다. 새 펜던트의 작은 하늘빛, 기도 팔찌의
+          모퉁이의 새 소식은 큰 발표보다 조용한 편지에 가깝습니다. 새 펜던트의 작은 하늘빛, 기도 팔찌의
           촉감, 선물 패키지의 여백을 하나씩 공개합니다.
         </p>
         <div className="mx-auto mt-9 grid max-w-[420px] grid-cols-3 gap-2 text-[10px] font-extrabold">
@@ -149,7 +149,7 @@ export default function NewsPage() {
         <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100">
           <Image
             src={newsImages.showroom}
-            alt="moriah 시즌 쇼룸의 선물 패키지와 십자가 악세사리"
+            alt="모퉁이 시즌 쇼룸의 선물 패키지와 십자가 악세사리"
             fill
             sizes="(min-width: 860px) 860px, 100vw"
             className="object-cover"
@@ -230,7 +230,7 @@ export default function NewsPage() {
         <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100 md:mt-20">
           <Image
             src={newsImages.guide}
-            alt="moriah 시즌 쇼룸 가이드 카드와 추상 안내도"
+            alt="모퉁이 시즌 쇼룸 가이드 카드와 추상 안내도"
             fill
             sizes="(min-width: 768px) 300px, 100vw"
             className="object-cover"
@@ -242,7 +242,7 @@ export default function NewsPage() {
         <div className="relative aspect-[1536/1024] overflow-hidden bg-neutral-100">
           <Image
             src={newsImages.visitor}
-            alt="moriah 새 십자가 목걸이를 착용해보는 방문자"
+            alt="모퉁이 새 십자가 목걸이를 착용해보는 방문자"
             fill
             sizes="(min-width: 860px) 860px, 100vw"
             className="object-cover"
@@ -254,7 +254,7 @@ export default function NewsPage() {
             <h2 className="mt-2 text-[24px] font-extrabold leading-tight">착용은 가장 작은 확인입니다.</h2>
           </div>
           <p className="text-[12px] leading-7 text-[#333]">
-            새 제품을 소개할 때 moriah가 가장 오래 보는 것은 착용자의 표정입니다. 십자가가 옷 위에서
+            새 제품을 소개할 때 모퉁이가 가장 오래 보는 것은 착용자의 표정입니다. 십자가가 옷 위에서
             너무 크게 말하지 않는지, 기도 팔찌가 손목의 움직임을 방해하지 않는지, 선물 포장이 마음보다
             앞서지 않는지를 확인합니다.
           </p>
@@ -264,7 +264,7 @@ export default function NewsPage() {
       <footer className="bg-black px-5 py-20 text-white md:px-0">
         <div className="mx-auto grid w-full max-w-[860px] gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <p className="text-[22px] font-semibold tracking-[0.42em]">moriah</p>
+            <p className="text-[22px] font-semibold tracking-[0.12em]">모퉁이</p>
             <p className="mt-8 text-[10px] font-semibold leading-5 text-white/75">
               상호 {site.legalName} | 대표 {site.owner}
               <br />

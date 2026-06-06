@@ -2,10 +2,10 @@ import Image from "next/image";
 import { products, services, site, stories } from "@/lib/site";
 
 const arrivalImages = [
-  { src: "/images/moriah/arrival-1.webp", alt: "레드 에나멜 십자가 귀걸이와 흰 꽃" },
-  { src: "/images/moriah/arrival-2.webp", alt: "테라코타 트레이 위 블루 십자가 목걸이" },
-  { src: "/images/moriah/arrival-3.webp", alt: "레몬과 함께 놓인 골드 링과 십자가 참" },
-  { src: "/images/moriah/arrival-4.webp", alt: "핑크 기도 팔찌와 십자가 참" },
+  { src: "/images/motungi/arrival-1.webp", alt: "레드 에나멜 십자가 귀걸이와 흰 꽃" },
+  { src: "/images/motungi/arrival-2.webp", alt: "테라코타 트레이 위 블루 십자가 목걸이" },
+  { src: "/images/motungi/arrival-3.webp", alt: "레몬과 함께 놓인 골드 링과 십자가 참" },
+  { src: "/images/motungi/arrival-4.webp", alt: "핑크 기도 팔찌와 십자가 참" },
 ];
 
 const companyRows = [
@@ -19,9 +19,9 @@ const companyRows = [
 
 const faqs = [
   {
-    question: "moriah는 어떤 브랜드인가요?",
+    question: "모퉁이는 어떤 브랜드인가요?",
     answer:
-      "moriah는 아기돌풍이 운영하는 모던 크리스찬 악세사리 브랜드로, 십자가 목걸이와 기도 팔찌 같은 신앙의 표식을 현대적인 톤으로 제안합니다.",
+      "모퉁이는 아기돌풍이 운영하는 감각적인 굿즈 공식스토어로, 의미 있는 악세사리와 선물 오브제를 현대적인 톤으로 제안합니다.",
   },
   {
     question: "사업자 정보는 어디 기준인가요?",
@@ -41,7 +41,7 @@ const structuredData = [
     "@type": ["Organization", "OnlineStore"],
     name: site.name,
     legalName: site.legalName,
-    alternateName: ["모리아", "아기돌풍"],
+    alternateName: ["모퉁이", "아기돌풍"],
     url: site.url,
     logo: `${site.url}${site.logo}`,
     image: `${site.url}${site.ogImage}`,
@@ -57,6 +57,21 @@ const structuredData = [
         name: product.title,
         description: product.detail,
         image: `${site.url}${product.src}`,
+        brand: {
+          "@type": "Brand",
+          name: site.name,
+        },
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "KRW",
+          price: product.price,
+          availability: "https://schema.org/InStock",
+          url: `${site.url}/#products`,
+          seller: {
+            "@type": "Organization",
+            name: site.legalName,
+          },
+        },
       },
     })),
   },
@@ -95,8 +110,8 @@ export default function Home() {
 
       <section className="relative h-[clamp(520px,56vw,980px)] overflow-hidden bg-[#d8c5b4]">
         <Image
-          src="/images/moriah/hero.webp"
-          alt="moriah 모던 크리스찬 십자가 목걸이 히어로 이미지"
+          src="/images/motungi/hero.webp"
+          alt="모퉁이 모던 크리스찬 십자가 목걸이 히어로 이미지"
           fill
           priority
           sizes="100vw"
@@ -108,8 +123,8 @@ export default function Home() {
           <a href="/collections" className="justify-self-start text-[22px] leading-none" aria-label="컬렉션 상세 페이지로 이동">
             ≡
           </a>
-          <p className="justify-self-center text-[28px] font-semibold tracking-[0.42em] text-black/80 md:text-[34px]">
-            moriah
+          <p className="justify-self-center text-[28px] font-semibold tracking-[0.12em] text-black/80 md:text-[34px]">
+            모퉁이
           </p>
           <nav className="hidden items-center gap-4 justify-self-end text-[12px] font-semibold md:flex">
             <a href="/news">News</a>
@@ -126,7 +141,7 @@ export default function Home() {
             The Quiet Cross Series
           </h1>
           <p className="mt-4 max-w-[560px] text-[13px] font-semibold leading-6 text-white/90">
-            십자가 목걸이, 기도 팔찌, 기독교 선물을 조용하고 현대적인 방식으로 제안하는 moriah의 첫 컬렉션입니다.
+            십자가 목걸이, 기도 팔찌, 기독교 선물을 조용하고 현대적인 방식으로 제안하는 모퉁이의 첫 컬렉션입니다.
           </p>
           <a
             href="/collections"
@@ -143,7 +158,7 @@ export default function Home() {
           매일의 믿음을 위한 모던 크리스찬 악세사리
         </h2>
         <p className="mx-auto mt-5 max-w-[560px] text-[11px] leading-5 text-[#222]">
-          moriah는 절제된 형태와 선명한 소재감으로 십자가와 신앙의 상징을 일상에서 착용하기 좋은
+          모퉁이는 절제된 형태와 선명한 소재감으로 십자가와 신앙의 상징을 일상에서 착용하기 좋은
           악세사리로 다시 해석합니다.
         </p>
         <a href="/collections" className="mt-4 inline-flex items-center justify-center text-[12px] font-bold">
@@ -168,7 +183,7 @@ export default function Home() {
       <section className="mx-auto w-full max-w-[1254px] px-5 pt-36 md:px-0">
         <div className="relative aspect-[1254/705] overflow-hidden bg-neutral-200">
           <Image
-            src="/images/moriah/brand-film.webp"
+            src="/images/motungi/brand-film.webp"
             alt="십자가 펜던트를 마감하는 장인의 손"
             fill
             sizes="(min-width: 1280px) 1254px, 100vw"
@@ -181,7 +196,7 @@ export default function Home() {
             </p>
           </div>
           <p className="absolute left-6 top-6 text-[14px] font-extrabold text-white md:left-10 md:top-9">
-            Moriah 1st Collection - SIGN
+            모퉁이 1st Collection - SIGN
           </p>
         </div>
 
@@ -226,7 +241,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto w-full max-w-[1254px] px-5 pt-40 text-center md:px-0">
-        <h2 className="text-[28px] font-semibold leading-none">Your moriah</h2>
+        <h2 className="text-[28px] font-semibold leading-none">Your 모퉁이</h2>
         <div className="mt-11 grid gap-x-1.5 gap-y-12 text-left md:grid-cols-3">
           {stories.map((post) => (
             <article key={post.src}>
@@ -245,7 +260,7 @@ export default function Home() {
               </div>
               <p className="mt-4 text-[11px] font-semibold">{post.text}</p>
               <p className="mt-5 text-[10px] leading-5 text-[#555]">
-                모리아의 악세사리는 신앙의 언어를 조용한 오브제로 바꿉니다. 기도하는 손, 선물하는
+                모퉁이의 악세사리는 신앙의 언어를 조용한 오브제로 바꿉니다. 기도하는 손, 선물하는
                 마음, 하루의 작은 루틴에 자연스럽게 함께합니다.
               </p>
             </article>
@@ -283,7 +298,7 @@ export default function Home() {
           <div>
             <p className="text-[11px] text-[#555]">Business Information</p>
             <h2 className="mt-1 text-[28px] font-extrabold leading-tight">
-              moriah는 사업자 아기돌풍이 운영합니다.
+              모퉁이는 사업자 아기돌풍이 운영합니다.
             </h2>
             <p className="mt-5 max-w-[720px] text-[12px] leading-6 text-[#333]">
               사업자등록증 기준 정보 중 공개 가능한 항목만 footer와 구조화 데이터에 반영했습니다. 개인정보에
@@ -304,7 +319,7 @@ export default function Home() {
       <section id="contact" className="mx-auto w-full max-w-[1254px] px-5 py-36 md:px-0">
         <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-start">
           <div>
-            <h2 className="text-[29px] font-extrabold leading-tight">moriah : a quiet sign for every day</h2>
+            <h2 className="text-[29px] font-extrabold leading-tight">모퉁이 : a quiet sign for every day</h2>
             <p className="mt-6 max-w-[700px] text-[12px] leading-6 text-[#333]">
               매일 착용하는 작은 표식이 하루의 방향을 바꿀 수 있다고 믿습니다. 제품 오픈과 입점, 선물
               패키지 관련 문의는 아래 메일로 남겨주세요.
@@ -318,7 +333,7 @@ export default function Home() {
           </a>
         </div>
 
-        <nav className="mt-12 border-y border-black" aria-label="Moriah sections">
+        <nav className="mt-12 border-y border-black" aria-label="모퉁이 sections">
           {["News", "Collection", "Collaboration", "Business Info", "Contact"].map((item) => (
             <a
               key={item}
@@ -350,7 +365,7 @@ export default function Home() {
       <footer className="bg-black px-5 py-20 text-white md:px-0 md:py-24">
         <div className="mx-auto grid w-full max-w-[1254px] gap-16 md:grid-cols-[1.4fr_0.7fr_0.7fr_0.9fr]">
           <div>
-            <p className="text-[25px] font-semibold tracking-[0.42em]">moriah</p>
+            <p className="text-[25px] font-semibold tracking-[0.12em]">모퉁이</p>
             <p className="mt-10 max-w-[560px] text-[10px] font-semibold leading-5 text-white/80">
               상호 {site.legalName} | 대표 {site.owner} | 사업자등록번호 {site.businessRegistration}
               <br />

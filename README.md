@@ -1,17 +1,18 @@
-# moriah
+# 모퉁이
 
-아기돌풍이 운영하는 모던 크리스찬 악세사리 브랜드 `moriah`의 Next.js 랜딩/브랜드 사이트입니다. 십자가 목걸이, 기도 팔찌, 기독교 선물 패키지, 교회/소모임 협업 문의까지 하나의 조용한 브랜드 경험으로 정리했습니다.
+아기돌풍이 운영하는 감각적인 굿즈 공식스토어 `모퉁이`의 Next.js 랜딩/브랜드 사이트입니다. 의미 있는 악세사리, 선물 오브제, 협업 문의까지 하나의 조용한 구매 경험으로 정리했습니다.
 
-![moriah walkthrough](docs/media/moriah-walkthrough.gif)
+![모퉁이 walkthrough](docs/media/moriah-walkthrough.gif)
 
-- Live domain: [moriah.work](https://moriah.work)
-- Canonical domain: [www.moriah.work](https://www.moriah.work)
+- Live domain: [www.motungistudio.com](https://www.motungistudio.com)
+- Canonical domain: [www.motungistudio.com](https://www.motungistudio.com)
+- Apex redirect: [motungistudio.com](https://motungistudio.com) → [www.motungistudio.com](https://www.motungistudio.com)
 - Original walkthrough video: [docs/media/moriah-walkthrough.webm](docs/media/moriah-walkthrough.webm)
 - Verification report: [docs/media/verification-report.json](docs/media/verification-report.json)
 
 ## Project Overview
 
-`moriah`는 기존 레퍼런스 사이트의 톤과 레이아웃 감각만 참고하고, 이미지와 콘텐츠는 모두 새 브랜드 콘셉트에 맞춰 재구성한 프로젝트입니다. 제품 자체가 크게 소리 내지 않는 대신, 여백과 촉감, 선물 맥락, 사업자 신뢰 정보를 차분하게 보여주는 방향으로 설계했습니다.
+`모퉁이`는 기존 레퍼런스 사이트의 톤과 레이아웃 감각만 참고하고, 이미지와 콘텐츠는 모두 새 브랜드 콘셉트에 맞춰 재구성한 프로젝트입니다. 제품 자체가 크게 소리 내지 않는 대신, 여백과 촉감, 선물 맥락, 사업자 신뢰 정보를 차분하게 보여주는 방향으로 설계했습니다.
 
 사업자 정보는 공개 가능한 항목만 사용합니다. 개인 주소에 가까운 정보는 사이트와 README에 포함하지 않았습니다.
 
@@ -30,15 +31,15 @@
 
 | Home | Collections |
 | --- | --- |
-| <img src="docs/media/screenshots/home.jpg" alt="moriah home screenshot" width="420" /> | <img src="docs/media/screenshots/collections.jpg" alt="moriah collections screenshot" width="420" /> |
+| <img src="docs/media/screenshots/home.jpg" alt="모퉁이 home screenshot" width="420" /> | <img src="docs/media/screenshots/collections.jpg" alt="모퉁이 collections screenshot" width="420" /> |
 
 | Collaboration | News |
 | --- | --- |
-| <img src="docs/media/screenshots/collaboration.jpg" alt="moriah collaboration screenshot" width="420" /> | <img src="docs/media/screenshots/news.jpg" alt="moriah news screenshot" width="420" /> |
+| <img src="docs/media/screenshots/collaboration.jpg" alt="모퉁이 collaboration screenshot" width="420" /> | <img src="docs/media/screenshots/news.jpg" alt="모퉁이 news screenshot" width="420" /> |
 
 | Business | Contact |
 | --- | --- |
-| <img src="docs/media/screenshots/business.jpg" alt="moriah business screenshot" width="420" /> | <img src="docs/media/screenshots/contact.jpg" alt="moriah contact screenshot" width="420" /> |
+| <img src="docs/media/screenshots/business.jpg" alt="모퉁이 business screenshot" width="420" /> | <img src="docs/media/screenshots/contact.jpg" alt="모퉁이 contact screenshot" width="420" /> |
 
 ## Tech Stack
 
@@ -60,7 +61,7 @@ The project includes:
 - `rss.xml`
 - `llms.txt`
 - favicon, manifest, OG/Twitter image settings
-- Business-facing keywords for `moriah`, `아기돌풍`, `김종란`, `크리스찬 악세사리`, `기독교 선물`, `교회 선물 문의`
+- Business-facing keywords for `모퉁이`, `모퉁이 굿즈`, `감각적인 굿즈`, `디자인 굿즈`, `오브젝트 브랜드`, `아기돌풍`, `김종란`, `선물 문의`
 
 ## Media Assets
 
@@ -116,12 +117,12 @@ The capture script records a continuous browser scroll to WebM. The GIF script c
 
 ## Business Info
 
-- Brand: `moriah`
+- Brand: `모퉁이`
 - Operator: `아기돌풍`
 - Representative: `김종란`
 - Business registration: `435-50-01307`
 - Business type: `도매 및 소매업`
 - Business item: `해외직구대행업`
-- Contact: `hello@moriah.work`
+- Contact: `hello@motungistudio.com`
 
 Private address fields are intentionally excluded from public documentation and site metadata.

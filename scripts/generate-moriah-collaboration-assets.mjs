@@ -30,7 +30,7 @@ async function fileExists(filePath) {
 }
 
 const sharedStyle = `
-Moriah modern Christian accessory collaboration editorial photography.
+모퉁이 modern Christian accessory collaboration editorial photography.
 Quiet Korean design brand, premium but restrained, warm white negative space,
 charcoal, pale sky blue, muted terracotta, brushed silver, linen, blank paper,
 minimal cross jewelry, prayer bracelets, gift packaging, soft daylight.
@@ -81,7 +81,7 @@ small matte box, pale blue wax-like accent, no readable text, premium gift set f
     size: "1024x1536",
     quality: "medium",
     prompt: `${sharedStyle}
-Portrait image: a quiet boutique display shelf for moriah-style Christian accessories,
+Portrait image: a quiet boutique display shelf for 모퉁이-style Christian accessories,
 stone stands, silver cross pendants, leather prayer bracelets, blank placards,
 soft shadows and museum-store arrangement, no readable text.`,
   },

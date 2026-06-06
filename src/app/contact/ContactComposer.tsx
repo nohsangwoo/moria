@@ -21,7 +21,7 @@ export function ContactComposer({ email }: ContactComposerProps) {
   const [message, setMessage] = useState("");
 
   const mailtoHref = useMemo(() => {
-    const subject = `[moriah] ${type}`;
+    const subject = `[모퉁이] ${type}`;
     const body = [
       `문의 유형: ${type}`,
       `이름/단체명: ${name}`,
@@ -64,7 +64,7 @@ export function ContactComposer({ email }: ContactComposerProps) {
               value={name}
               onChange={(event) => setName(event.target.value)}
               className="h-11 w-full border border-black px-3 text-[12px] outline-none"
-              placeholder="예: 김종란 / 모리아"
+              placeholder="예: 김종란 / 모퉁이"
             />
           </label>
           <label className="grid gap-2">

@@ -16,19 +16,19 @@ export function GET() {
       title: `${site.name} The Quiet Cross Series`,
       link: `${site.url}/collections`,
       guid: `${site.url}/collections`,
-      description: "moriah 첫 컬렉션의 제작 노트와 착용 장면을 담은 컬렉션 상세 페이지입니다.",
+      description: "모퉁이의 첫 컬렉션과 의미 있는 악세사리, 선물 오브제, 착용 장면을 소개합니다.",
     },
     {
       title: `${site.name} Season Letter 2026`,
       link: `${site.url}/news`,
       guid: `${site.url}/news`,
-      description: "moriah 새 제품, 시즌 쇼룸, 파트너 안내를 담은 News 페이지입니다.",
+      description: "모퉁이 신제품, 시즌 쇼룸, 선물 굿즈와 파트너 안내를 담은 News 페이지입니다.",
     },
     {
       title: `${site.name} Collaboration`,
       link: `${site.url}/collaboration`,
       guid: `${site.url}/collaboration`,
-      description: "교회 선물, 브랜드 협업, 편집숍 팝업을 위한 moriah 협업 안내 페이지입니다.",
+      description: "교회 굿즈, 소모임 선물, 브랜드 협업, 편집숍 팝업을 위한 모퉁이 협업 안내 페이지입니다.",
     },
     {
       title: `${site.legalName} Business Info`,
@@ -40,7 +40,7 @@ export function GET() {
       title: `${site.name} Contact`,
       link: `${site.url}/contact`,
       guid: `${site.url}/contact`,
-      description: "moriah 제품 문의, 기독교 선물 패키지, 교회/소모임 협업, 사업자 정보 확인을 위한 공식 문의 페이지입니다.",
+      description: "모퉁이 굿즈 제품 문의, 선물 패키지, 협업, 사업자 정보 확인을 위한 공식 문의 페이지입니다.",
     },
     ...services.map((service) => ({
       title: `${site.name} ${service.title}`,
@@ -78,7 +78,7 @@ export function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8" ?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
       <channel>
-        <title>${escapeXml(`${site.name} · 모던 크리스찬 악세사리`)}</title>
+        <title>${escapeXml(`${site.name} · 감각적인 굿즈 공식스토어`)}</title>
         <link>${site.url}</link>
         <atom:link href="${site.url}/rss.xml" rel="self" type="application/rss+xml" />
         <description>${escapeXml(site.description)}</description>
