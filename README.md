@@ -49,6 +49,8 @@
 - Tailwind CSS v4
 - App Router metadata, sitemap, robots, RSS, `llms.txt`
 - GPT Image 2.0 generated brand/editorial assets
+- Grok Imagine generated page videos
+- Self-hosted Pretendard variable font with `next/font/local`
 - Playwright-based visual walkthrough capture
 
 ## SEO & Metadata
@@ -69,10 +71,23 @@ Portfolio media is stored under [docs/media](docs/media):
 
 - GIF preview: [docs/media/moriah-walkthrough.gif](docs/media/moriah-walkthrough.gif)
 - Original WebM recording: [docs/media/moriah-walkthrough.webm](docs/media/moriah-walkthrough.webm)
+- Grok page videos: [docs/media/grok-videos](docs/media/grok-videos)
+- Grok prompt guide: [docs/grok-video-prompts.md](docs/grok-video-prompts.md)
 - Page screenshots: [docs/media/screenshots](docs/media/screenshots)
 - Automated verification report: [docs/media/verification-report.json](docs/media/verification-report.json)
 
 The `webm` file is the reusable original recording for portfolio uploads or external editing. The `gif` file is optimized for quick README preview.
+
+### Grok Video Outputs
+
+| Page | Video |
+| --- | --- |
+| Home | [home.mp4](docs/media/grok-videos/home.mp4) |
+| Collections | [collections.mp4](docs/media/grok-videos/collections.mp4) |
+| Collaboration | [collaboration.mp4](docs/media/grok-videos/collaboration.mp4) |
+| News | [news.mp4](docs/media/grok-videos/news.mp4) |
+| Business | [business.mp4](docs/media/grok-videos/business.mp4) |
+| Contact | [contact.mp4](docs/media/grok-videos/contact.mp4) |
 
 ## Local Development
 

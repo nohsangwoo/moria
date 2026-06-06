@@ -1,4 +1,4 @@
-import { copyFile, mkdir, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
@@ -6,6 +6,7 @@ import sharp from "sharp";
 const root = process.cwd();
 const brandDir = path.join(root, "public", "brand");
 const faviconPath = path.join(root, "src", "app", "favicon.ico");
+const pretendardFontPath = path.join(root, "src", "app", "fonts", "PretendardVariable.woff2");
 const bundledLogoSourcePath = path.join(brandDir, "motungi-logo-source.png");
 const fallbackDownloadLogoPath =
   "C:\\Users\\nsgr1\\Downloads\\ChatGPT Image 2026년 6월 6일 오후 11_37_22.png";
@@ -114,10 +115,30 @@ async function writeLogoIcons() {
   await writeFile(faviconPath, makeIco(icoImages));
 }
 
-function minimalOgSvg(width, height) {
+async function pretendardFontFaceCss() {
+  if (!existsSync(pretendardFontPath)) return "";
+
+  const fontBase64 = (await readFile(pretendardFontPath)).toString("base64");
+  return `
+      @font-face {
+        font-family: "PretendardVariable";
+        src: url("data:font/woff2;base64,${fontBase64}") format("woff2");
+        font-weight: 45 920;
+        font-style: normal;
+      }`;
+}
+
+function minimalOgSvg(width, height, fontFaceCss) {
   return `
   <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
     <defs>
+      <style>
+        ${fontFaceCss}
+        text {
+          font-family: "PretendardVariable", "Pretendard Variable", Pretendard, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+          font-variant-ligatures: contextual;
+        }
+      </style>
       <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
         <feDropShadow dx="0" dy="10" stdDeviation="28" flood-color="#000000" flood-opacity="0.06"/>
       </filter>
@@ -132,29 +153,25 @@ function minimalOgSvg(width, height) {
         x="0"
         y="96"
         fill="${palette.ink}"
-        font-family="Segoe UI, Helvetica Neue, Arial, sans-serif"
         font-size="96"
-        font-weight="300"
-        letter-spacing="24">${escapeXml("motungi")}</text>
+        font-weight="280"
+        letter-spacing="22">${escapeXml("motungi")}</text>
       <text
         x="2"
         y="268"
         fill="${palette.ink}"
-        font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, Arial, sans-serif"
         font-size="36"
         font-weight="800">${escapeXml("모퉁이 공식스토어")}</text>
       <text
         x="2"
         y="322"
         fill="${palette.muted}"
-        font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, Arial, sans-serif"
         font-size="30"
         font-weight="500">${escapeXml("일상의 모퉁이에 놓이는 감각적인 오브젝트 브랜드, motungi")}</text>
       <text
         x="4"
         y="402"
         fill="${palette.soft}"
-        font-family="Segoe UI, Helvetica Neue, Arial, sans-serif"
         font-size="22"
         font-weight="500"
         letter-spacing="1.8">${escapeXml("www.motungistudio.com")}</text>
@@ -165,7 +182,9 @@ function minimalOgSvg(width, height) {
 async function composeOg(filePath) {
   const width = 1200;
   const height = 630;
-  await sharp(Buffer.from(minimalOgSvg(width, height)))
+  const fontFaceCss = await pretendardFontFaceCss();
+
+  await sharp(Buffer.from(minimalOgSvg(width, height, fontFaceCss)))
     .png()
     .toFile(filePath);
 }

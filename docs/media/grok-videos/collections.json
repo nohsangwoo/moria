@@ -1,0 +1,13 @@
+{
+  "requestId": "864012f4-ac18-96ba-ba2e-9850047c372c",
+  "model": "grok-imagine-video",
+  "status": "done",
+  "duration": 6,
+  "respectModeration": true,
+  "aspectRatio": "16:9",
+  "resolution": "480p",
+  "output": "C:\\Users\\nsgr1\\Documents\\projects\\mosery_copy\\docs\\media\\grok-videos\\collections.mp4",
+  "bytes": 593371,
+  "generatedAt": "2026-06-06T15:46:42.797Z",
+  "prompt": "Create a quiet collection teaser video for Motungi. Show a calm studio desk, a small pendant, folded gift wrap, and a pale wall display. The camera glides slowly over the object surfaces, then settles on a minimal accessory resting near soft cream paper. Use warm white light, very subtle shadow movement, premium editorial composition, and a gentle sense of craft. No readable text, no misspelled logo, no extra brand names, no distorted hands, no flickering jewelry, no exaggerated religious scene, no dark dramatic lighting, no busy background, no fast cuts, no camera shake, no watermark."
+}

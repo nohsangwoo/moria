@@ -1,0 +1,13 @@
+{
+  "requestId": "e6253e51-d68d-9915-ad16-8ee069d4e1f4",
+  "model": "grok-imagine-video",
+  "status": "done",
+  "duration": 6,
+  "respectModeration": true,
+  "aspectRatio": "16:9",
+  "resolution": "480p",
+  "output": "C:\\Users\\nsgr1\\Documents\\projects\\mosery_copy\\docs\\media\\grok-videos\\collaboration.mp4",
+  "bytes": 1122553,
+  "generatedAt": "2026-06-06T15:47:10.853Z",
+  "prompt": "Create a refined partnership film for Motungi. A curated collaboration table with gift boxes, small accessories, sample cards, and soft neutral fabric. Slow overhead camera movement, hands entering briefly to arrange a ribbon and package, elegant retail collaboration mood, clean Korean lifestyle brand aesthetic. Keep motion natural and unhurried. No readable text, no misspelled logo, no extra brand names, no distorted hands, no flickering jewelry, no exaggerated religious scene, no dark dramatic lighting, no busy background, no fast cuts, no camera shake, no watermark."
+}

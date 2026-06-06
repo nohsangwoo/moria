@@ -1,0 +1,13 @@
+{
+  "requestId": "5ceb7b96-0d44-9594-b4ed-bb298ed832ff",
+  "model": "grok-imagine-video",
+  "status": "done",
+  "duration": 6,
+  "respectModeration": true,
+  "aspectRatio": "16:9",
+  "resolution": "480p",
+  "output": "C:\\Users\\nsgr1\\Documents\\projects\\mosery_copy\\docs\\media\\grok-videos\\contact.mp4",
+  "bytes": 965950,
+  "generatedAt": "2026-06-06T15:48:47.104Z",
+  "prompt": "Create a calm contact page background video for Motungi. Show gift packaging being prepared on a clean desk, a soft email-ready workspace mood, small product samples, cream paper, and black accent details. Slow hand movement tying a ribbon, gentle camera slide, peaceful inquiry and consultation atmosphere. No readable text, no UI, no brand misspelling, no extra brand names, no distorted hands, no flickering jewelry, no exaggerated religious scene, no dark dramatic lighting, no busy background, no fast cuts, no camera shake, no watermark."
+}
