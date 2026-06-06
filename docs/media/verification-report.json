@@ -1,0 +1,102 @@
+{
+  "baseUrl": "http://127.0.0.1:3000",
+  "generatedAt": "2026-06-06T09:46:58.530Z",
+  "routes": [
+    {
+      "route": "/",
+      "label": "Home",
+      "screenshot": "docs/media/screenshots/home.jpg",
+      "title": "moriah | 모던 크리스찬 악세사리 · 십자가 목걸이",
+      "h1": "The Quiet Cross Series",
+      "images": 12,
+      "links": 29,
+      "hasPrivateAddress": false,
+      "hasLegacyReference": false,
+      "scrollHeight": 6680,
+      "scrollDurationMs": 11000,
+      "checkedAt": "2026-06-06T09:46:00.516Z"
+    },
+    {
+      "route": "/collections",
+      "label": "Collections",
+      "screenshot": "docs/media/screenshots/collections.jpg",
+      "title": "The Quiet Cross Series | moriah Collections | moriah",
+      "h1": "The Quiet Cross Series",
+      "images": 12,
+      "links": 21,
+      "hasPrivateAddress": false,
+      "hasLegacyReference": false,
+      "scrollHeight": 6858,
+      "scrollDurationMs": 11000,
+      "checkedAt": "2026-06-06T09:46:13.087Z"
+    },
+    {
+      "route": "/collaboration",
+      "label": "Collaboration",
+      "screenshot": "docs/media/screenshots/collaboration.jpg",
+      "title": "Collaboration | moriah | moriah",
+      "h1": "Quiet gifts,shared meaning.",
+      "images": 7,
+      "links": 22,
+      "hasPrivateAddress": false,
+      "hasLegacyReference": false,
+      "scrollHeight": 6288,
+      "scrollDurationMs": 10362,
+      "checkedAt": "2026-06-06T09:46:24.949Z"
+    },
+    {
+      "route": "/news",
+      "label": "News",
+      "screenshot": "docs/media/screenshots/news.jpg",
+      "title": "News | moriah Season Letter | moriah",
+      "h1": "Season Letter 2026",
+      "images": 7,
+      "links": 14,
+      "hasPrivateAddress": false,
+      "hasLegacyReference": false,
+      "scrollHeight": 6648,
+      "scrollDurationMs": 11000,
+      "checkedAt": "2026-06-06T09:46:37.446Z"
+    },
+    {
+      "route": "/business",
+      "label": "Business",
+      "screenshot": "docs/media/screenshots/business.jpg",
+      "title": "Business Info | 아기돌풍 김종란 대표 | moriah",
+      "h1": "아기돌풍에서moriah까지.",
+      "images": 6,
+      "links": 22,
+      "hasPrivateAddress": false,
+      "hasLegacyReference": false,
+      "scrollHeight": 6035,
+      "scrollDurationMs": 9875,
+      "checkedAt": "2026-06-06T09:46:48.858Z"
+    },
+    {
+      "route": "/contact",
+      "label": "Contact",
+      "screenshot": "docs/media/screenshots/contact.jpg",
+      "title": "Contact | moriah 문의 | moriah",
+      "h1": "조용히 묻고,정확히 이어갑니다.",
+      "images": 4,
+      "links": 25,
+      "hasPrivateAddress": false,
+      "hasLegacyReference": false,
+      "scrollHeight": 3977,
+      "scrollDurationMs": 5917,
+      "checkedAt": "2026-06-06T09:46:56.987Z"
+    }
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "pacing": {
+    "initialPauseMs": 800,
+    "contactPauseMs": 650,
+    "scrollPixelsPerSecond": 520,
+    "minScrollDurationMs": 5000,
+    "maxScrollDurationMs": 11000,
+    "finalPauseMs": 1200
+  },
+  "video": "docs/media/moriah-walkthrough.webm",
+  "gif": "docs/media/moriah-walkthrough.gif"
+}
