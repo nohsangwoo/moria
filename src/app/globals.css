@@ -5,6 +5,8 @@
   --foreground: #171717;
   --font-sans: var(--font-pretendard), "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, ui-monospace, monospace;
+  scroll-behavior: smooth;
+  scroll-padding-top: 112px;
 }
 
 @theme inline {
@@ -20,6 +22,12 @@ body {
   font-family: var(--font-sans);
   font-feature-settings: "rlig" 1, "calt" 1;
   text-rendering: optimizeLegibility;
+}
+
+.motungi-wordmark {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.34em;
 }
 
 a {

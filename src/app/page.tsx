@@ -119,22 +119,6 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-black/25" />
 
-        <header className="absolute left-1/2 top-0 z-10 grid w-full max-w-[1254px] -translate-x-1/2 grid-cols-3 items-center px-5 py-8 text-white md:px-0">
-          <a href="/collections" className="justify-self-start text-[22px] leading-none" aria-label="컬렉션 상세 페이지로 이동">
-            ≡
-          </a>
-          <p className="justify-self-center text-[28px] font-semibold tracking-[0.12em] text-black/80 md:text-[34px]">
-            모퉁이
-          </p>
-          <nav className="hidden items-center gap-4 justify-self-end text-[12px] font-semibold md:flex">
-            <a href="/news">News</a>
-            <a href="/collections">Collection</a>
-            <a href="/collaboration">Collaboration</a>
-            <a href="/business">Business</a>
-            <a href="/contact">Contact</a>
-          </nav>
-        </header>
-
         <div className="absolute bottom-[15%] left-1/2 z-10 w-full max-w-[1254px] -translate-x-1/2 px-5 text-white md:px-0">
           <p className="text-[15px] font-bold">새 컬렉션 출시</p>
           <h1 className="mt-2 max-w-[760px] text-[31px] font-extrabold leading-[1.05] md:text-[42px]">

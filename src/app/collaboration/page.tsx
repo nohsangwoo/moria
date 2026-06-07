@@ -95,27 +95,7 @@ export const metadata: Metadata = {
 
 export default function CollaborationPage() {
   return (
-    <main className="min-h-screen bg-white text-[#101010]">
-      <header className="mx-auto grid w-full max-w-[1120px] grid-cols-3 items-center px-5 py-8 md:px-0">
-        <Link href="/" className="justify-self-start text-[18px] leading-none" aria-label="홈으로 이동">
-          ☰
-        </Link>
-        <Link
-          href="/"
-          className="justify-self-center text-[17px] font-semibold tracking-[0.12em]"
-          aria-label="모퉁이 home"
-        >
-          모퉁이
-        </Link>
-        <nav className="hidden items-center gap-4 justify-self-end text-[10px] font-semibold md:flex">
-          <Link href="/news">News</Link>
-          <Link href="/collections">Collection</Link>
-          <Link href="/collaboration">Collaboration</Link>
-          <Link href="/business">Business</Link>
-          <Link href="/contact">Contact</Link>
-        </nav>
-      </header>
-
+    <main className="min-h-screen bg-white pt-[116px] text-[#101010] md:pt-[128px]">
       <section className="mx-auto w-full max-w-[1120px] px-5 pt-8 md:px-0">
         <div className="grid gap-10 md:grid-cols-[0.78fr_1.22fr] md:items-end">
           <div className="pb-2">
